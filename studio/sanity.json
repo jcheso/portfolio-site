@@ -1,11 +1,11 @@
 {
   "root": true,
-  "project": {
-    "name": "My Portfolio & Blog"
-  },
   "api": {
     "projectId": "jllmszne",
     "dataset": "production"
+  },
+  "project": {
+    "name": "My Portfolio & Blog"
   },
   "plugins": [
     "@sanity/base",

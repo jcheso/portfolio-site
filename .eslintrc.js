@@ -1,4 +1,10 @@
 module.exports = {
+  "prettier/prettier": [
+    "error",
+    {
+      endOfLine: "auto",
+    },
+  ],
   parser: "babel-eslint",
   parserOptions: {
     sourceType: "module",
