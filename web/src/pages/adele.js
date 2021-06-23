@@ -1,13 +1,13 @@
 import React from "react";
 
-const Test = () => {
+const Adele = () => {
   return (
     <div className="container mx-auto ">
       <div className="flex h-screen justify-center items-center">
-        <h1 className="text-2xl text-blue-600 text-center">Jarryd Cheso</h1>
+        <h1 className="text-2xl text-center text-pink-500">I love Adele</h1>
       </div>
     </div>
   );
 };
 
-export default Test;
+export default Adele;
