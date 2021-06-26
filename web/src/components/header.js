@@ -53,7 +53,7 @@ export default function Header(props) {
                 (props.transparent ? "text-white" : "text-gray-800") +
                 " text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
               }
-              href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
+              href="https://www.jarrydcheso.me"
             >
               Jarryd Cheso
             </a>
@@ -86,7 +86,7 @@ export default function Header(props) {
                       : "text-gray-800 hover:text-gray-600") +
                     " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   }
-                  href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/profile"
+                  href="https://www.jarrydcheso.me/blog"
                 >
                   <i
                     className={
@@ -96,7 +96,7 @@ export default function Header(props) {
                       " far fa-file-alt text-lg leading-lg mr-2"
                     }
                   />{" "}
-                  Travel Blog
+                  Travel
                 </a>
               </li>
             </ul>
@@ -109,7 +109,7 @@ export default function Header(props) {
                       : "text-gray-800 hover:text-gray-600") +
                     " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   }
-                  href="#pablo"
+                  href="https://www.facebook.com/jarryd.cheso"
                 >
                   <i
                     className={
@@ -119,12 +119,8 @@ export default function Header(props) {
                       " fab fa-facebook text-lg leading-lg "
                     }
                   />
-                  <span className="lg:hidden inline-block ml-2">
-                    Contact Me
-                  </span>
                 </a>
               </li>
-
               <li className="flex items-center">
                 <a
                   className={
@@ -133,17 +129,36 @@ export default function Header(props) {
                       : "text-gray-800 hover:text-gray-600") +
                     " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   }
-                  href="#pablo"
+                  href="https://www.instagram.com/jarryd711/"
                 >
                   <i
                     className={
                       (props.transparent
                         ? "lg:text-gray-300 text-gray-500"
                         : "text-gray-500") +
-                      " fab fa-twitter text-lg leading-lg "
+                      " fab fa-instagram text-lg leading-lg "
                     }
                   />
-                  <span className="lg:hidden inline-block ml-2">Tweet</span>
+                </a>
+              </li>
+              <li className="flex items-center">
+                <a
+                  className={
+                    (props.transparent
+                      ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
+                      : "text-gray-800 hover:text-gray-600") +
+                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  }
+                  href="https://www.linkedin.com/in/jcheso/"
+                >
+                  <i
+                    className={
+                      (props.transparent
+                        ? "lg:text-gray-300 text-gray-500"
+                        : "text-gray-500") +
+                      " fab fa-linkedin-in text-lg leading-lg "
+                    }
+                  />
                 </a>
               </li>
 
@@ -155,7 +170,7 @@ export default function Header(props) {
                       : "text-gray-800 hover:text-gray-600") +
                     " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   }
-                  href="#pablo"
+                  href="https://github.com/jcheso"
                 >
                   <i
                     className={
@@ -179,6 +194,7 @@ export default function Header(props) {
                   }
                   type="button"
                   style={{ transition: "all .15s ease" }}
+                  href="mailto:jarryd.cheso@gmail.com"
                 >
                   <i className="fas fa-arrow-alt-circle-down"></i> Contact Me
                 </button>

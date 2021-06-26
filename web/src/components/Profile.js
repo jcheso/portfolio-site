@@ -96,13 +96,13 @@ export default function Profile() {
                     <i className="fas fa-map-marker-alt mr-2 text-lg text-gray-500"></i>{" "}
                     London, United Kingdom
                   </div>
-                  <div className="mb-2 text-gray-700 mt-10">
+                  {/* <div className="mb-2 text-gray-700 mt-10">
                     <i className="fas fa-briefcase mr-2 text-lg text-gray-500"></i>
-                    Master of Computing
-                  </div>
+                
+                  </div> */}
                   <div className="mb-2 text-gray-700">
                     <i className="fas fa-university mr-2 text-lg text-gray-500"></i>
-                    Imperial College London
+                    Master of Computing '22 - Imperial College London
                   </div>
                 </div>
                 <div className="mt-10 py-10 border-t border-gray-300 text-center">

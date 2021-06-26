@@ -7,13 +7,7 @@ import "../styles/layout.css";
 
 const Layout = ({ children, onHideNav, onShowNav, showNav, siteTitle }) => (
   <>
-    <Header
-    // siteTitle={siteTitle}
-    // onHideNav={onHideNav}
-    // onShowNav={onShowNav}
-    // showNav={showNav}
-    />
-    {/* <div className={styles.content}>{children}</div> */}
+    <Header transparent="true" />
     <Profile />
     <Footer />
   </>
