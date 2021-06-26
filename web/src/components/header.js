@@ -53,7 +53,7 @@ export default function Header(props) {
                 (props.transparent ? "text-white" : "text-gray-800") +
                 " text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
               }
-              href="https://www.jarrydcheso.me"
+              href="https://www.jarrydcheso.me/blog"
             >
               Jarryd Cheso
             </a>
@@ -96,7 +96,7 @@ export default function Header(props) {
                       " far fa-file-alt text-lg leading-lg mr-2"
                     }
                   />{" "}
-                  Travel
+                  Blog
                 </a>
               </li>
             </ul>
@@ -119,6 +119,7 @@ export default function Header(props) {
                       " fab fa-facebook text-lg leading-lg "
                     }
                   />
+                  <span className="lg:hidden inline-block ml-2">Facebook</span>
                 </a>
               </li>
               <li className="flex items-center">
@@ -139,6 +140,7 @@ export default function Header(props) {
                       " fab fa-instagram text-lg leading-lg "
                     }
                   />
+                  <span className="lg:hidden inline-block ml-2">Instagram</span>
                 </a>
               </li>
               <li className="flex items-center">
@@ -159,6 +161,7 @@ export default function Header(props) {
                       " fab fa-linkedin-in text-lg leading-lg "
                     }
                   />
+                  <span className="lg:hidden inline-block ml-2">LinkedIn</span>
                 </a>
               </li>
 
@@ -180,24 +183,26 @@ export default function Header(props) {
                       " fab fa-github text-lg leading-lg "
                     }
                   />
-                  <span className="lg:hidden inline-block ml-2">Star</span>
+                  <span className="lg:hidden inline-block ml-2">GitHub</span>
                 </a>
               </li>
 
               <li className="flex items-center">
-                <button
-                  className={
-                    (props.transparent
-                      ? "bg-white text-gray-800 active:bg-gray-100"
-                      : "bg-pink-500 text-white active:bg-pink-600") +
-                    " text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
-                  }
-                  type="button"
-                  style={{ transition: "all .15s ease" }}
-                  href="mailto:jarryd.cheso@gmail.com"
-                >
-                  <i className="fas fa-arrow-alt-circle-down"></i> Contact Me
-                </button>
+                <a href="mailto:jarryd.cheso@gmail.com">
+                  <button
+                    className={
+                      (props.transparent
+                        ? "bg-white text-gray-800 active:bg-gray-100"
+                        : "bg-pink-500 text-white active:bg-pink-600") +
+                      " text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+                    }
+                    type="button"
+                    style={{ transition: "all .15s ease" }}
+                  >
+                    <i className="fas fa-arrow-alt-circle-down"></i>
+                    Contact Me
+                  </button>
+                </a>
               </li>
             </ul>
           </div>
