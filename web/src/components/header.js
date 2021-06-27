@@ -19,7 +19,7 @@ export default function Header(props) {
                 (props.transparent ? "text-white" : "text-gray-800") +
                 " text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
               }
-              href="https://www.jarrydcheso.me/blog"
+              href="https://www.jarrydcheso.me"
             >
               Jarryd Cheso
             </a>
