@@ -1,37 +1,3 @@
-// import { Link } from "gatsby";
-// import React from "react";
-// import Icon from "./icon";
-// import { cn } from "../lib/helpers";
-
-// import * as styles from "./header.module.css";
-
-// const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
-//   <div className={styles.root}>
-//     <div className={styles.wrapper}>
-//       <div className="text-blue-500 text-2xl">
-//         <Link to="/">{siteTitle}</Link>
-//       </div>
-
-//       <nav className={cn(styles.nav, showNav && styles.showNav)}>
-//         <ul className="flex">
-//           <li>
-//             <Link to="/blog/">Blog</Link>
-//           </li>
-//           <li>
-//             <Link to="/archive/">Archive</Link>
-//           </li>
-//         </ul>
-//       </nav>
-//       <button
-//         className={styles.toggleNavButton}
-//         onClick={showNav ? onHideNav : onShowNav}
-//       >
-//         <Icon symbol="hamburger" />
-//       </button>
-//     </div>
-//   </div>
-// );
-
 import React from "react";
 
 export default function Header(props) {
@@ -151,6 +117,27 @@ export default function Header(props) {
                       : "text-gray-800 hover:text-gray-600") +
                     " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   }
+                  href="https://www.youtube.com/user/Cheso7"
+                >
+                  <i
+                    className={
+                      (props.transparent
+                        ? "lg:text-gray-300 text-gray-500"
+                        : "text-gray-500") +
+                      " fab fa-youtube text-lg leading-lg "
+                    }
+                  />
+                  <span className="lg:hidden inline-block ml-2">YouTube</span>
+                </a>
+              </li>
+              <li className="flex items-center">
+                <a
+                  className={
+                    (props.transparent
+                      ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
+                      : "text-gray-800 hover:text-gray-600") +
+                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  }
                   href="https://www.linkedin.com/in/jcheso/"
                 >
                   <i
@@ -186,8 +173,29 @@ export default function Header(props) {
                   <span className="lg:hidden inline-block ml-2">GitHub</span>
                 </a>
               </li>
-
               <li className="flex items-center">
+                <a
+                  className={
+                    (props.transparent
+                      ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
+                      : "text-gray-800 hover:text-gray-600") +
+                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  }
+                  href="mailto:jarryd.cheso@gmail.com"
+                >
+                  <i
+                    className={
+                      (props.transparent
+                        ? "lg:text-gray-300 text-gray-500"
+                        : "text-gray-500") +
+                      " fa fa-envelope text-lg leading-lg "
+                    }
+                  />
+                  <span className="lg:hidden inline-block ml-2">Email</span>
+                </a>
+              </li>
+
+              {/* <li className="flex items-center">
                 <a href="mailto:jarryd.cheso@gmail.com">
                   <button
                     className={
@@ -199,11 +207,11 @@ export default function Header(props) {
                     type="button"
                     style={{ transition: "all .15s ease" }}
                   >
-                    <i className="fas fa-arrow-alt-circle-down"></i>
+                    <i className="fas fa-arrow-alt-circle-down mr-1"></i>
                     Contact Me
                   </button>
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
