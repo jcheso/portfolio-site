@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./header";
-import Profile from "./Profile";
-import Footer from "./Footer";
+import Profile from "./profile";
+import Footer from "./footer";
 
 import "../styles/layout.css";
 

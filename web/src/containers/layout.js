@@ -18,15 +18,7 @@ function LayoutContainer(props) {
     );
   }
 
-  return (
-    <Layout
-      {...props}
-      // showNav={showNav}
-      // siteTitle={data.site.title}
-      // onHideNav={handleHideNav}
-      // onShowNav={handleShowNav}
-    />
-  );
+  return <Layout {...props} />;
 }
 
 export default LayoutContainer;

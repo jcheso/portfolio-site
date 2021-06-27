@@ -10,9 +10,9 @@ import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
 import SEO from "../components/seo";
 import Layout from "../containers/layout";
-import Header from "../components/Header";
-import Profile from "../components/Profile";
-import Footer from "../components/Footer";
+import Header from "../components/header";
+import Footer from "../components/footer";
+
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export const query = graphql`
@@ -38,7 +38,7 @@ export const query = graphql`
     }
   }
 
-  query IndexPageQuery {
+  query BlogPageQuery {
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
       subtitle
@@ -94,23 +94,6 @@ const BlogPage = (props) => {
   }
 
   return (
-    // <Layout>
-    //   <SEO
-    //     title={site.title}
-    //     description={site.description}
-    //     keywords={site.keywords}
-    //   />
-    // <Container>
-    //   <p>{site.subtitle}</p>
-    //   {postNodes && (
-    //     <BlogPostPreviewList
-    //       title="Latest blog posts"
-    //       nodes={postNodes}
-    //       browseMoreHref="/archive/"
-    //     />
-    //   )}
-    // </Container>
-    // </Layout>
     <>
       <Header />
       <Container>
