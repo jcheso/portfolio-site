@@ -11,7 +11,7 @@ import GraphQLErrorList from "../components/graphql-error-list";
 import SEO from "../components/seo";
 import Layout from "../containers/layout";
 import Header from "../components/header";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 

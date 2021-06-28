@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header(props) {
+const Header = (props) => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <>
@@ -218,6 +218,6 @@ function Header(props) {
       </nav>
     </>
   );
-}
+};
 
 export default Header;

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Profile() {
+const Profile = () => {
   return (
     <>
       <main className="profile-page">
@@ -94,6 +94,6 @@ function Profile() {
       </main>
     </>
   );
-}
+};
 
 export default Profile;
