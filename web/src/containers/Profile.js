@@ -13,7 +13,7 @@ const Profile = () => {
             <AboutMe />
           </div>
         </div>
-        <div className="grid py-48 bg-gray-300">
+        <div className="grid pt-48 pb-16 bg-gray-300">
           <div className="container mx-auto px-4">
             <SkillsContainer />
           </div>
