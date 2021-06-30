@@ -52,6 +52,27 @@ const Header = (props) => {
                       : "text-gray-800 hover:text-gray-600") +
                     " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   }
+                  href="https://www.jarrydcheso.me/projects"
+                >
+                  <i
+                    className={
+                      (props.transparent
+                        ? "lg:text-gray-300 text-gray-500"
+                        : "text-gray-500") +
+                      " far fa-file-code text-lg leading-lg mr-2"
+                    }
+                  />
+                  My Projects
+                </a>
+              </li>
+              <li className="flex items-center">
+                <a
+                  className={
+                    (props.transparent
+                      ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
+                      : "text-gray-800 hover:text-gray-600") +
+                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  }
                   href="https://www.jarrydcheso.me/blog"
                 >
                   <i
@@ -61,7 +82,7 @@ const Header = (props) => {
                         : "text-gray-500") +
                       " far fa-file-alt text-lg leading-lg mr-2"
                     }
-                  />{" "}
+                  />
                   My Blog
                 </a>
               </li>
