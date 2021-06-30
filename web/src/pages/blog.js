@@ -95,6 +95,11 @@ const BlogPage = (props) => {
 
   return (
     <>
+      <SEO
+        title={"My Blog"}
+        description={"A place to record my adventures"}
+        keywords={site.keywords}
+      />
       <Header />
       <Container>
         {postNodes && (

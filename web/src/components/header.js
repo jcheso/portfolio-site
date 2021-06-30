@@ -62,7 +62,7 @@ const Header = (props) => {
                       " far fa-file-alt text-lg leading-lg mr-2"
                     }
                   />{" "}
-                  Blog
+                  My Blog
                 </a>
               </li>
             </ul>
