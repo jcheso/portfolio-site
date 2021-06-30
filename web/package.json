@@ -12,6 +12,20 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
+    "@iconify-icons/ant-design": "^1.1.0",
+    "@iconify-icons/bx": "^1.1.0",
+    "@iconify-icons/ci": "^1.1.0",
+    "@iconify-icons/cib": "^1.1.0",
+    "@iconify-icons/dashicons": "^1.1.0",
+    "@iconify-icons/et": "^1.1.0",
+    "@iconify-icons/fa-brands": "^1.1.0",
+    "@iconify-icons/file-icons": "^1.1.7",
+    "@iconify-icons/fontisto": "^1.1.0",
+    "@iconify-icons/icomoon-free": "^1.1.0",
+    "@iconify-icons/logos": "^1.1.10",
+    "@iconify-icons/simple-icons": "^1.1.31",
+    "@iconify-icons/vscode-icons": "^1.1.5",
+    "@iconify/react": "^1.1.4",
     "dotenv": "^8.0.0",
     "postcss": "^8.2.7",
     "postcss-preset-env": "^6.6.0"

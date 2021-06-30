@@ -8,12 +8,12 @@ const Profile = () => {
     <>
       <main className="profile-page">
         <HomeBackground />
-        <div className="grid py-16 bg-gray-300">
+        <div className="py-16 bg-gray-300">
           <div className="container mx-auto px-4">
             <AboutMe />
           </div>
         </div>
-        <div className="grid pt-48 pb-16 bg-gray-300">
+        <div className="pt-48 pb-16 bg-gray-300">
           <div className="container mx-auto px-4">
             <SkillsContainer />
           </div>

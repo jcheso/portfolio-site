@@ -22,7 +22,7 @@ const AboutMe = () => {
             <div className="flex justify-center py-4 lg:pt-4 pt-8"></div>
           </div>
         </div>
-        <div className="text-center mt-12">
+        <div className="text-center mt-8">
           <h3 className="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2">
             Jarryd Cheso
           </h3>
