@@ -6,7 +6,8 @@ import React from "react";
 import SEO from "../components/seo";
 import { graphql } from "gatsby";
 import { mapEdgesToNodes } from "../lib/helpers";
-
+import Header from "../components/header";
+import Footer from "../components/Footer";
 import { responsiveTitle1 } from "../components/typography.module.css";
 
 export const query = graphql`
@@ -48,15 +49,17 @@ const ArchivePage = (props) => {
   const postNodes = data && data.posts && mapEdgesToNodes(data.posts);
 
   return (
-    <Layout>
+    <>
       <SEO title="Archive" />
+      <Header></Header>
       <Container>
         <h1 className={responsiveTitle1}>Archive</h1>
         {postNodes && postNodes.length > 0 && (
           <BlogPostPreviewGrid nodes={postNodes} />
         )}
       </Container>
-    </Layout>
+      <Footer></Footer>
+    </>
   );
 };
 

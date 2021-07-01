@@ -5,8 +5,12 @@ import React from "react";
 
 function BlogPostPreviewGrid(props) {
   return (
-    <div className={styles.root}>
-      {props.title && <h2 className={styles.headline}>{props.title}</h2>}
+    <div className="my-8">
+      {props.title && (
+        <h2 className="text-2xl font-bold leading-normal mb-8 text-gray-800 uppercase">
+          {props.title}
+        </h2>
+      )}
       <ul className={styles.grid}>
         {props.nodes &&
           props.nodes.map((node) => (
@@ -16,7 +20,7 @@ function BlogPostPreviewGrid(props) {
           ))}
       </ul>
       {props.browseMoreHref && (
-        <div className={styles.browseMoreNav}>
+        <div className="text-center text-sm leading-normal mt-8 text-gray-500 font-bold uppercase">
           <Link to={props.browseMoreHref}>Browse more</Link>
         </div>
       )}

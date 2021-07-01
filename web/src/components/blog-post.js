@@ -8,22 +8,16 @@ import { buildImageObj } from "../lib/helpers";
 import { imageUrlFor } from "../lib/image-url";
 
 function BlogPost(props) {
-  const {
-    _rawBody,
-    authors,
-    categories,
-    title,
-    mainImage,
-    publishedAt,
-  } = props;
+  const { _rawBody, authors, categories, title, mainImage, publishedAt } =
+    props;
   return (
     <article className={styles.root}>
       {mainImage && mainImage.asset && (
         <div className={styles.mainImage}>
           <img
             src={imageUrlFor(buildImageObj(mainImage))
-              .width(1200)
-              .height(Math.floor((9 / 16) * 1200))
+              .width(4032)
+              .height(Math.floor((9 / 16) * 4032))
               .fit("crop")
               .auto("format")
               .url()}
