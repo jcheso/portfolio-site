@@ -6,8 +6,6 @@ import React from "react";
 import { format } from "date-fns";
 import { imageUrlFor } from "../lib/image-url";
 
-import { responsiveTitle3 } from "./typography.module.css";
-
 function BlogPostPreview(props) {
   return (
     <Link
@@ -15,7 +13,7 @@ function BlogPostPreview(props) {
       to={getBlogUrl(props.publishedAt, props.slug.current)}
     >
       <div className="min-w-0 break-words bg-gray-50 w-full shadow-xl rounded-2xl">
-        <div className="p-4">
+        <div className="p-8">
           <div>
             {props.mainImage && props.mainImage.asset && (
               <img
@@ -30,7 +28,7 @@ function BlogPostPreview(props) {
             )}
           </div>
           <div>
-            <h3 className="my-1 text-xl font-semibold leading-relaxed text-gray-800">
+            <h3 className="mt-2 text-xl font-semibold leading-relaxed text-gray-800">
               {props.title}
             </h3>
             {props._rawExcerpt && (

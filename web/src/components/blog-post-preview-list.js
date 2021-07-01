@@ -7,7 +7,7 @@ function BlogPostPreviewGrid(props) {
   return (
     <div className="my-8">
       {props.title && (
-        <h2 className="text-2xl font-bold leading-normal mb-8 text-gray-800 uppercase">
+        <h2 className="text-2xl pl-4 font-bold leading-normal mb-8 text-gray-800 uppercase">
           {props.title}
         </h2>
       )}
