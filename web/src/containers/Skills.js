@@ -88,7 +88,7 @@ const SkillsContainer = () => {
               </div>
               <div className="flex flex-col mx-2 my-2 p-2">
                 <Icon className="w-24 h-24" icon={expressIcon} />
-                <div className="pt-1 text-center">Express</div>
+                <div className="pt-1 text-center">Express.js</div>
               </div>
               <div className="flex flex-col mx-2 my-2 p-2">
                 <Icon className="w-24 h-24" icon={bxlPython} />
