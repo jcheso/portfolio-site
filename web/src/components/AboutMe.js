@@ -15,14 +15,14 @@ const AboutMe = () => {
               />
             </div>
           </div>
-          <div className="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
+          {/* <div className="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
             <div className="py-6 px-3 sm:mt-0"></div>
           </div>
           <div className="w-full lg:w-4/12 px-4 lg:order-1">
             <div className="flex justify-center py-4 lg:pt-4 pt-8"></div>
-          </div>
+          </div> */}
         </div>
-        <div className="text-center mt-8">
+        <div className="text-center lg:mt-6 mt-4 pt-20">
           <h3 className="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2">
             Jarryd Cheso
           </h3>
