@@ -27,7 +27,7 @@ import gatsbyIcon from "@iconify-icons/cib/gatsby";
 import graphqlIcon from "@iconify-icons/cib/graphql";
 import bulmaIcon from "@iconify-icons/simple-icons/bulma";
 import netlifyIcon from "@iconify-icons/cib/netlify";
-import f1memtest from "../assets/img/projects/f1memorytest.png";
+import f1memtest from "../assets/img/projects/f1memorytester.png";
 
 const Portfolio = () => {
   return (
