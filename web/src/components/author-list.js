@@ -6,7 +6,9 @@ import { imageUrlFor } from "../lib/image-url";
 function AuthorList({ items, title }) {
   return (
     <div className={styles.root}>
-      <h2 className={styles.headline}>{title}</h2>
+      <h2 className="text-l pt-4 pb-2 font-bold leading-normal text-gray-800">
+        {title}
+      </h2>
       <ul className={styles.list}>
         {items.map(({ author, _key }) => {
           const authorName = author && author.name;

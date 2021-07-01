@@ -36,15 +36,15 @@ const AboutMe = () => {
                   </div> */}
           <div className="mb-2 text-gray-700">
             <i className="fas fa-university mr-2 text-lg text-gray-500"></i>
-            Master of Computing '22 - Imperial College London
+            Master of Computing Science '22 - Imperial College London
           </div>
         </div>
         <div className="mt-10 py-10 border-t border-gray-300 text-center">
           <div className="flex flex-wrap justify-center">
             <div className="w-full lg:w-9/12 px-4">
               <p className="mb-4 text-lg leading-relaxed text-gray-800">
-                I'm a postgraduate student studying Computing at Imperial
-                College London.
+                I'm a postgraduate student studying Computing Science at
+                Imperial College London.
               </p>
               <p className="mb-4 text-lg leading-relaxed text-gray-800">
                 In my previous life, I worked as a subsea engineer for five
