@@ -7,8 +7,7 @@ const HomeBackground = () => {
         <div
           className="absolute top-0 w-full h-full bg-center bg-cover bg-hero-pattern"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80')",
+            backgroundImage: "url('https://i.imgur.com/8qRnm4T.jpeg')",
           }}
         >
           <span
