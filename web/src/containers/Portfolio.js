@@ -27,7 +27,7 @@ import graphqlIcon from "@iconify-icons/cib/graphql";
 import bulmaIcon from "@iconify-icons/simple-icons/bulma";
 import netlifyIcon from "@iconify-icons/cib/netlify";
 
-import f1memtest from "../assets/img/projects/f1full.png";
+import f1memtest from "../assets/img/projects/f1viewport.png";
 import jobsearch from "../assets/img/projects/jobsearchanalyticaViewport.png";
 
 const Portfolio = () => {
