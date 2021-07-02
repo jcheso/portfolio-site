@@ -49,22 +49,6 @@ const Portfolio = () => {
           description="A search engine that returns analytics on salary, top companies hiring, and top skills advertised."
           link="https://github.com/jcheso/Job-Search-Analytics"
         ></Project>
-
-        <Project
-          img={f1memtest}
-          title="F1 Driver Memory Tester"
-          skillsList={[htmlFive, css3Icon, bxlJavascript, bxlReact]}
-          description="A game to see if you can click all 20 F1 drivers of the 2021 season without hitting the same one twice"
-          link="https://jcheso.github.io/F1-memory-tester/"
-        ></Project>
-
-        <Project
-          img={f1memtest}
-          title="F1 Driver Memory Tester"
-          skillsList={[htmlFive, css3Icon, bxlJavascript, bxlReact]}
-          description="A game to see if you can click all 20 F1 drivers of the 2021 season without hitting the same one twice"
-          link="https://jcheso.github.io/F1-memory-tester/"
-        ></Project>
       </main>
     </>
   );
