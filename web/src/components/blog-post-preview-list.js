@@ -20,7 +20,7 @@ function BlogPostPreviewGrid(props) {
           ))}
       </ul>
       {props.browseMoreHref && (
-        <div className="text-center text-sm leading-normal mt-8 text-gray-500 font-bold uppercase">
+        <div className="text-center text-sm leading-normal mt-8 text-gray-500 font-bold uppercase lg:mb-16 mb-12">
           <Link to={props.browseMoreHref}>Browse more</Link>
         </div>
       )}

@@ -1,7 +1,6 @@
 import React from "react";
 import Project from "../components/project";
 import { Icon, InlineIcon } from "@iconify/react";
-
 import mongodbIcon from "@iconify-icons/cib/mongodb";
 import bxlDjango from "@iconify-icons/bx/bxl-django";
 import expressIcon from "@iconify-icons/logos/express";
@@ -27,26 +26,28 @@ import gatsbyIcon from "@iconify-icons/cib/gatsby";
 import graphqlIcon from "@iconify-icons/cib/graphql";
 import bulmaIcon from "@iconify-icons/simple-icons/bulma";
 import netlifyIcon from "@iconify-icons/cib/netlify";
-import f1memtest from "../assets/img/projects/f1memorytester.png";
+
+import f1memtest from "../assets/img/projects/f1full.png";
+import jobsearch from "../assets/img/projects/jobsearchanalyticaViewport.png";
 
 const Portfolio = () => {
   return (
     <>
-      <main className="flex flex-row flex-wrap p-10 m-10 justify-evenly">
+      <main className=" flex flex-row flex-wrap mt-8 mb-32 justify-evenly">
         <Project
           img={f1memtest}
-          title="F1 Driver Memory Tester"
+          title="F1 Driver Memory Test"
           skillsList={[htmlFive, css3Icon, bxlJavascript, bxlReact]}
-          description="A game to see if you can click all 20 F1 drivers of the 2021 season without hitting the same one twice"
+          description="A memory game that requires you to click every driver without hitting the same one twice."
           link="https://jcheso.github.io/F1-memory-tester/"
         ></Project>
 
         <Project
-          img={f1memtest}
-          title="F1 Driver Memory Tester"
-          skillsList={[htmlFive, css3Icon, bxlJavascript, bxlReact]}
-          description="A game to see if you can click all 20 F1 drivers of the 2021 season without hitting the same one twice"
-          link="https://jcheso.github.io/F1-memory-tester/"
+          img={jobsearch}
+          title="JobSearch Analytica"
+          skillsList={[htmlFive, bxlPython, bxlDjango, tailwindIcon]}
+          description="A search engine that returns analytics on salary, top companies hiring, and top skills advertised."
+          link="https://github.com/jcheso/Job-Search-Analytics"
         ></Project>
 
         <Project

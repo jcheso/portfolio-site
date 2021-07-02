@@ -13,7 +13,7 @@ function BlogPostPreview(props) {
       to={getBlogUrl(props.publishedAt, props.slug.current)}
     >
       <div className="min-w-0 break-words bg-gray-50 w-full shadow-xl rounded-2xl">
-        <div className="p-8">
+        <div className="lg:p-8 p-4 mb-4">
           <div>
             {props.mainImage && props.mainImage.asset && (
               <img
