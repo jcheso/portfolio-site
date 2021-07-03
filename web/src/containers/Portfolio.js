@@ -1,6 +1,7 @@
 import React from "react";
 import Project from "../components/project";
 import { Icon, InlineIcon } from "@iconify/react";
+
 import mongodbIcon from "@iconify-icons/cib/mongodb";
 import bxlDjango from "@iconify-icons/bx/bxl-django";
 import expressIcon from "@iconify-icons/logos/express";
