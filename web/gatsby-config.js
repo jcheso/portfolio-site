@@ -9,15 +9,27 @@ const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
   plugins: [
-    "gatsby-plugin-postcss",
-    "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-image",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: `${__dirname}/src/assets/img`,
+      },
+    },
+    "gatsby-transformer-sharp", // Needed for dynamic imagesed for dynamic images
+    "gatsby-plugin-sharp",
     "gatsby-plugin-postcss",
     {
       resolve: "gatsby-source-sanity",
       options: {
-        ...clientConfig.sanity,
-        token: process.env.SANITY_READ_TOKEN,
+        // ...clientConfig.sanity,
+        projectId: process.env.GATSBY_SANITY_PROJECT_ID,
+        dataset: process.env.GATSBY_SANITY_DATASET,
+        // token: process.env.SANITY_READ_TOKEN,
+        token: process.env.GATSBY_SANITY_TOKEN,
+
         watchMode: !isProd,
         overlayDrafts: !isProd,
       },
