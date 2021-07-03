@@ -29,6 +29,8 @@ import netlifyIcon from "@iconify-icons/cib/netlify";
 
 import f1memtest from "../assets/img/projects/f1viewport.png";
 import jobsearch from "../assets/img/projects/jobsearchanalyticaViewport.png";
+import algotrading from "../assets/img/projects/algotrading.png";
+import snp500 from "../assets/img/projects/snp500.png";
 
 const Portfolio = () => {
   return (
@@ -45,9 +47,31 @@ const Portfolio = () => {
         <Project
           img={jobsearch}
           title="JobSearch Analytica"
-          skillsList={[htmlFive, bxlPython, bxlDjango, tailwindIcon]}
+          skillsList={[
+            htmlFive,
+            bxlPython,
+            bxlDjango,
+            tailwindIcon,
+            herokuIcon,
+          ]}
           description="A search engine that returns analytics on salary, top companies hiring, and top skills advertised."
-          link="https://github.com/jcheso/Job-Search-Analytics"
+          link="https://job-search-analytica.herokuapp.com/"
+        ></Project>
+
+        <Project
+          img={algotrading}
+          title="IG Market Algo-trading"
+          skillsList={[bxlPython, pandasIcon, numpyIcon, amazonAws]}
+          description="An algo-trading script built to run on an IG Markets account. Deployable to AWS to run in the cloud."
+          link="https://github.com/jcheso/IG-Market-Trading-Script"
+        ></Project>
+
+        <Project
+          img={snp500}
+          title="S&P 500 Stock Analysis"
+          skillsList={[bxlPython, pandasIcon, numpyIcon, mysqlIcon]}
+          description="A script that scrapes stock data from the S&P 500 to a MySQL database and recommends stock buys based off various strategies."
+          link="https://github.com/jcheso/Investment-Strategies"
         ></Project>
       </main>
     </>
