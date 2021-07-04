@@ -107,13 +107,21 @@ const SkillsContainer = () => {
                 <div className="pt-1 text-center">Django</div>
               </div>
               <div className="flex flex-col mx-2 my-2 p-2">
+                <Icon className="w-24 h-24" icon={mysqlIcon} />
+                <div className="pt-1 text-center">MySQL</div>
+              </div>
+              <div className="flex flex-col mx-2 my-2 p-2">
+                <Icon className="w-24 h-24" icon={mongodbIcon} />
+                <div className="pt-1 text-center">MongoDB</div>
+              </div>
+              {/* <div className="flex flex-col mx-2 my-2 p-2">
                 <Icon className="w-24 h-24" icon={databaseIcon} />
                 <div className="pt-1 text-center">SQL</div>
               </div>
               <div className="flex flex-col mx-2 my-2 p-2">
                 <Icon className="w-24 h-24" icon={documentsIcon} />
                 <div className="pt-1 text-center">NoSQL</div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -147,14 +155,7 @@ const SkillsContainer = () => {
                 <Icon className="w-24 h-24" icon={bxlFirebase} />
                 <div className="pt-1 text-center">Firebase</div>
               </div>
-              <div className="flex flex-col mx-2 my-2 p-2">
-                <Icon className="w-24 h-24" icon={mysqlIcon} />
-                <div className="pt-1 text-center">MySQL</div>
-              </div>
-              <div className="flex flex-col mx-2 my-2 p-2">
-                <Icon className="w-24 h-24" icon={mongodbIcon} />
-                <div className="pt-1 text-center">MongoDB</div>
-              </div>
+
               {/* <div className="flex flex-col mx-2 my-2 p-2">
                 <Icon className="w-24 h-24" icon={graphqlIcon} />
                 <div className="pt-1 text-center">GraphQL</div>

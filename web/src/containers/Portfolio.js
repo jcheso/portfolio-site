@@ -32,11 +32,29 @@ import f1memtest from "../assets/img/projects/f1viewport.png";
 import jobsearch from "../assets/img/projects/jobsearchanalyticaViewport.png";
 import algotrading from "../assets/img/projects/algotrading.png";
 import snp500 from "../assets/img/projects/snp500.png";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import ProjectCMS from "../components/projectCMS";
+var uniqid = require("uniqid");
 
-const Portfolio = () => {
+const Portfolio = (props) => {
   return (
     <>
       <main className=" flex flex-row flex-wrap mt-8 mb-32 justify-evenly">
+        {props.projects.map((project) => {
+          const img = getImage(project.previewImage.asset.gatsbyImageData);
+          return (
+            <ProjectCMS
+              img={img}
+              title={project.title}
+              skills={project.skills}
+              description={project.description}
+              link={project.projectUrl}
+              key={uniqid()}
+            ></ProjectCMS>
+          );
+        })}
+
+        {/* 
         <Project
           img={f1memtest}
           title="F1 Driver Memory Test"
@@ -73,7 +91,7 @@ const Portfolio = () => {
           skillsList={[bxlPython, pandasIcon, numpyIcon, mysqlIcon]}
           description="A script that scrapes stock data from the S&P 500 to a MySQL database and recommends stock buys based off various strategies."
           link="https://github.com/jcheso/Investment-Strategies"
-        ></Project>
+        ></Project> */}
       </main>
     </>
   );

@@ -1,9 +1,11 @@
 import React from "react";
 import { Icon, InlineIcon } from "@iconify/react";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+var uniqid = require("uniqid");
 
 const Project = ({ img, title, skillsList, description, link }) => {
   return (
-    <a href={link}>
+    <a href={link} id={uniqid()}>
       <div className="p-10 m-4 bg-gray-50 shadow-xl rounded-2xl md:w-96">
         <div className="text-xl lg:text-xl font-bold leading-normal mb-8 text-gray-800 uppercase text-center">
           {title}

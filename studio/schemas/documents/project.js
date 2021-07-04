@@ -3,7 +3,7 @@ import { format } from "date-fns";
 export default {
   name: "project",
   type: "document",
-  title: "Portfolio  Project",
+  title: "Projects",
   fields: [
     {
       name: "title",
@@ -38,6 +38,11 @@ export default {
       type: "text",
       title: "Description",
       description: "A summary of the project",
+    },
+    {
+      title: "Project URL",
+      name: "projectUrl",
+      type: "url",
     },
   ],
 };

@@ -1,23 +1,70 @@
 import React from "react";
+import { graphql } from "gatsby";
+import GraphQLErrorList from "../components/graphql-error-list";
 import SEO from "../components/seo";
-
 import Header from "../components/header";
 import Footer from "../components/Footer";
 import Portfolio from "../containers/Portfolio";
-import Container from "../components/container";
+import {
+  filterOutDocsPublishedInTheFuture,
+  filterOutDocsWithoutSlugs,
+  mapEdgesToNodes,
+} from "../lib/helpers";
+import Layout from "../containers/layout";
 
 import "../styles/layout.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-const Projects = () => (
-  <>
-    <SEO title="My Projects" />
-    <Header></Header>
+export const query = graphql`
+  query ProjectsPageQuery {
+    projects: allSanityProject {
+      edges {
+        node {
+          description
+          projectUrl
+          title
+          skills {
+            icon {
+              asset {
+                gatsbyImageData
+              }
+            }
+          }
+          previewImage {
+            asset {
+              gatsbyImageData
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
-    <Portfolio></Portfolio>
+const Projects = (props) => {
+  const { data, errors } = props;
+  console.log("Queried data:", data);
+  const projectNodes = (data || {}).projects
+    ? mapEdgesToNodes(data.projects)
+    : [];
+  console.log("Queried nodes:", projectNodes);
+  if (errors) {
+    return (
+      <Layout>
+        <GraphQLErrorList errors={errors} />
+      </Layout>
+    );
+  }
+  return (
+    <>
+      <SEO title="My Projects" />
+      <Header></Header>
 
-    <Footer></Footer>
-  </>
-);
+      <Portfolio projects={projectNodes}></Portfolio>
+
+      <Footer></Footer>
+    </>
+  );
+};
 
 export default Projects;
