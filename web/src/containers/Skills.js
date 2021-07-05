@@ -21,27 +21,21 @@ const SkillsContainer = (props) => {
               {skills
                 .filter((skill) => skill.skillType === "frontend")
                 .map((filteredSkill, meta) => {
-                  console.log(filteredSkill);
                   const icon = getImage(
                     filteredSkill.icon.asset.gatsbyImageData
                   );
                   return (
-                    <>
-                      <div
+                    <div key={uniqid()} className="flex flex-col mx-2 my-2 p-2">
+                      <GatsbyImage
+                        className="w-24 h-24"
+                        image={icon}
+                        alt={filteredSkill.title}
                         key={uniqid()}
-                        className="flex flex-col mx-2 my-2 p-2"
-                      >
-                        <GatsbyImage
-                          className="w-24 h-24"
-                          image={icon}
-                          alt={filteredSkill.title}
-                          key={uniqid()}
-                        />
-                        <div className="pt-1 text-center">
-                          {filteredSkill.title}
-                        </div>
+                      />
+                      <div className="pt-1 text-center">
+                        {filteredSkill.title}
                       </div>
-                    </>
+                    </div>
                   );
                 })}
             </div>
@@ -56,27 +50,21 @@ const SkillsContainer = (props) => {
               {skills
                 .filter((skill) => skill.skillType === "backend")
                 .map((filteredSkill, meta) => {
-                  console.log(filteredSkill);
                   const icon = getImage(
                     filteredSkill.icon.asset.gatsbyImageData
                   );
                   return (
-                    <>
-                      <div
+                    <div key={uniqid()} className="flex flex-col mx-2 my-2 p-2">
+                      <GatsbyImage
+                        className="w-24 h-24"
+                        image={icon}
+                        alt={filteredSkill.title}
                         key={uniqid()}
-                        className="flex flex-col mx-2 my-2 p-2"
-                      >
-                        <GatsbyImage
-                          className="w-24 h-24"
-                          image={icon}
-                          alt={filteredSkill.title}
-                          key={uniqid()}
-                        />
-                        <div className="pt-1 text-center">
-                          {filteredSkill.title}
-                        </div>
+                      />
+                      <div className="pt-1 text-center">
+                        {filteredSkill.title}
                       </div>
-                    </>
+                    </div>
                   );
                 })}
             </div>
@@ -91,27 +79,21 @@ const SkillsContainer = (props) => {
               {skills
                 .filter((skill) => skill.skillType === "tools")
                 .map((filteredSkill, meta) => {
-                  console.log(filteredSkill);
                   const icon = getImage(
                     filteredSkill.icon.asset.gatsbyImageData
                   );
                   return (
-                    <>
-                      <div
+                    <div key={uniqid()} className="flex flex-col mx-2 my-2 p-2">
+                      <GatsbyImage
+                        className="w-24 h-24"
+                        image={icon}
+                        alt={filteredSkill.title}
                         key={uniqid()}
-                        className="flex flex-col mx-2 my-2 p-2"
-                      >
-                        <GatsbyImage
-                          className="w-24 h-24"
-                          image={icon}
-                          alt={filteredSkill.title}
-                          key={uniqid()}
-                        />
-                        <div className="pt-1 text-center">
-                          {filteredSkill.title}
-                        </div>
+                      />
+                      <div className="pt-1 text-center">
+                        {filteredSkill.title}
                       </div>
-                    </>
+                    </div>
                   );
                 })}
             </div>

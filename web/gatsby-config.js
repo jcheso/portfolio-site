@@ -18,7 +18,7 @@ module.exports = {
         path: `${__dirname}/src/assets/img`,
       },
     },
-    "gatsby-transformer-sharp", // Needed for dynamic imagesed for dynamic images
+    "gatsby-transformer-sharp", // Needed for dynamic imagese for dynamic images
     "gatsby-plugin-sharp",
     "gatsby-plugin-postcss",
     {

@@ -5,14 +5,15 @@ import HomeBackground from "../components/HomeBackground";
 
 const Profile = (props) => {
   const profile = (props || {}).profile;
-
+  const backgroundImage = (props || {}).backgroundImage;
   return (
     <>
       <main className="profile-page">
-        <HomeBackground />
+        <HomeBackground backgroundImage={backgroundImage} />
         <div className="py-16 bg-gray-300">
           <div className="container mx-auto px-4">
             <AboutMe
+              portrait={profile.portrait.asset.gatsbyImageData}
               name={profile.name}
               location={profile.location}
               job={profile.job}

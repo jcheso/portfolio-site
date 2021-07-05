@@ -11,6 +11,11 @@ export default {
       title: "Full Name",
     },
     {
+      name: "portrait",
+      type: "image",
+      title: "Portrait",
+    },
+    {
       name: "location",
       type: "string",
       title: "Location",
