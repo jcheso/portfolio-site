@@ -39,7 +39,7 @@ export const query = graphql`
         skillType
         icon {
           asset {
-            gatsbyImageData(height: 96, width: 96)
+            gatsbyImageData
           }
         }
       }

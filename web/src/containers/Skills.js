@@ -25,7 +25,10 @@ const SkillsContainer = (props) => {
                     filteredSkill.icon.asset.gatsbyImageData
                   );
                   return (
-                    <div key={uniqid()} className="flex flex-col mx-2 my-2 p-2">
+                    <div
+                      key={uniqid()}
+                      className="flex flex-col mx-2 my-2 p-2 text-gray-800"
+                    >
                       <GatsbyImage
                         className="w-24 h-24"
                         image={icon}
