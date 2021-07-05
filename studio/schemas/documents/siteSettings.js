@@ -10,9 +10,14 @@ export default {
       title: "Title",
     },
     {
-      name: 'subtitle',
-      type: 'string',
-      title: 'Subtitle',
+      name: "subtitle",
+      type: "string",
+      title: "Subtitle",
+    },
+    {
+      name: "backgroundImage",
+      type: "image",
+      title: "Background Image",
     },
     {
       name: "description",
