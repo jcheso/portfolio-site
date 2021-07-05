@@ -51,7 +51,7 @@ const Header = (props) => {
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
                       : "text-gray-800 hover:text-gray-600") +
-                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                    " px-3 py-4 lg:py-2 flex items-center text-xs w-full  uppercase font-bold"
                   }
                   to="/projects"
                 >
@@ -72,7 +72,7 @@ const Header = (props) => {
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
                       : "text-gray-800 hover:text-gray-600") +
-                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                    " px-3 py-4 lg:py-2 flex items-center text-xs w-full uppercase font-bold"
                   }
                   to="/blog"
                 >
@@ -95,7 +95,7 @@ const Header = (props) => {
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
                       : "text-gray-800 hover:text-gray-600") +
-                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase w-full font-bold"
                   }
                   href="https://www.facebook.com/jarryd.cheso"
                 >
@@ -116,7 +116,7 @@ const Header = (props) => {
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
                       : "text-gray-800 hover:text-gray-600") +
-                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase w-full font-bold"
                   }
                   href="https://www.instagram.com/jarryd711/"
                 >
@@ -137,7 +137,7 @@ const Header = (props) => {
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
                       : "text-gray-800 hover:text-gray-600") +
-                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase w-full font-bold"
                   }
                   href="https://www.youtube.com/user/Cheso7"
                 >
@@ -158,7 +158,7 @@ const Header = (props) => {
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
                       : "text-gray-800 hover:text-gray-600") +
-                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase w-full font-bold"
                   }
                   href="https://www.linkedin.com/in/jcheso/"
                 >
@@ -180,7 +180,7 @@ const Header = (props) => {
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
                       : "text-gray-800 hover:text-gray-600") +
-                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase w-full font-bold"
                   }
                   href="https://github.com/jcheso"
                 >
@@ -201,7 +201,7 @@ const Header = (props) => {
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
                       : "text-gray-800 hover:text-gray-600") +
-                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                    " px-3 py-4 lg:py-2 flex items-center text-xs uppercase w-full font-bold"
                   }
                   href="mailto:jarryd.cheso@gmail.com"
                 >
