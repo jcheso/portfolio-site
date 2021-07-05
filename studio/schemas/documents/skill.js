@@ -9,5 +9,18 @@ export default {
       type: "image",
       title: "Icon",
     },
+    {
+      name: "skillType",
+      type: "string",
+      title: "Type",
+      options: {
+        list: [
+          { title: "Frontend", value: "frontend" },
+          { title: "Backend", value: "backend" },
+          { title: "Tools and Services", value: "tools" },
+        ],
+        layout: "radio",
+      },
+    },
   ],
 };

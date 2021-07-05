@@ -1,6 +1,13 @@
 import S from "@sanity/desk-tool/structure-builder";
 import { MdSettings } from "react-icons/md";
-import { MdPerson, MdDescription, MdLocalOffer } from "react-icons/md";
+import {
+  MdCollectionsBookmark,
+  MdAccountBox,
+  MdPerson,
+  MdDescription,
+  MdLocalOffer,
+  MdWhatshot,
+} from "react-icons/md";
 import IframePreview from "../previews/IframePreview";
 
 // Web preview configuration
@@ -44,7 +51,7 @@ export default () =>
     .title("Content")
     .items([
       S.listItem()
-        .title("Settings")
+        .title("Site Settings")
         .icon(MdSettings)
         .child(
           S.editor()
@@ -54,10 +61,26 @@ export default () =>
         ),
       S.divider(),
       S.listItem()
-        .title("Blog posts")
+        .title("Profile")
+        .icon(MdAccountBox)
+        .child(
+          S.editor().id("profile").schemaType("profile").documentId("profile")
+        ),
+      S.listItem()
+        .title("Projects")
+        .icon(MdCollectionsBookmark)
+        .schemaType("project")
+        .child(S.documentTypeList("project").title("My Projects")),
+      S.listItem()
+        .title("Skills")
+        .icon(MdWhatshot)
+        .schemaType("skill")
+        .child(S.documentTypeList("skill").title("My Skills")),
+      S.listItem()
+        .title("Blog Posts")
         .icon(MdDescription)
         .schemaType("post")
-        .child(S.documentTypeList("post").title("Blog posts")),
+        .child(S.documentTypeList("post").title("Blog Posts")),
       S.listItem()
         .title("Authors")
         .icon(MdPerson)
@@ -73,8 +96,14 @@ export default () =>
       // defined the structure above.
       ...S.documentTypeListItems().filter(
         (listItem) =>
-          !["category", "author", "post", "siteSettings"].includes(
-            listItem.getId()
-          )
+          ![
+            "category",
+            "author",
+            "post",
+            "siteSettings",
+            "profile",
+            "project",
+            "skill",
+          ].includes(listItem.getId())
       ),
     ]);

@@ -1,6 +1,10 @@
 import React from "react";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import ProjectCMS from "../components/projectCMS";
+var uniqid = require("uniqid");
 
-const AboutMe = () => {
+const AboutMe = (props) => {
+  console.log(props);
   return (
     <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
       <div className="px-6">
@@ -24,37 +28,27 @@ const AboutMe = () => {
         </div>
         <div className="text-center lg:mt-6 mt-4 pt-20">
           <h3 className="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2">
-            Jarryd Cheso
+            {props.name}
           </h3>
           <div className="text-sm leading-normal mt-0 mb-2 text-gray-500 font-bold uppercase">
             <i className="fas fa-map-marker-alt mr-2 text-lg text-gray-500"></i>{" "}
-            London, United Kingdom
+            {props.location}
           </div>
           {/* <div className="mb-2 text-gray-700 mt-10">
-                    <i className="fas fa-briefcase mr-2 text-lg text-gray-500"></i>
-                
-                  </div> */}
+            <i className="fas fa-briefcase mr-2 text-lg text-gray-500"></i>
+            {props.job}
+          </div> */}
           <div className="mb-2 text-gray-700">
             <i className="fas fa-university mr-2 text-lg text-gray-500"></i>
-            Master of Computing Science '22 - Imperial College London
+            {props.education}
           </div>
         </div>
         <div className="mt-10 py-10 border-t border-gray-300 text-center">
           <div className="flex flex-wrap justify-center">
             <div className="w-full lg:w-9/12 px-4">
               <p className="mb-4 text-lg leading-relaxed text-gray-800">
-                I'm a postgraduate student studying Computing Science at
-                Imperial College London.
+                {props.aboutMe}
               </p>
-              <p className="mb-4 text-lg leading-relaxed text-gray-800">
-                In my previous life, I worked as a subsea engineer for five
-                years in the oil and gas industry in Australia.
-              </p>
-              {/* <p className="mb-4 text-lg leading-relaxed text-gray-800">
-                        I love travelling and recording my adventures to share
-                        with family and friends. I hope you can take away
-                        something useful from my posts here.
-                      </p> */}
             </div>
           </div>
         </div>

@@ -18,12 +18,28 @@ export const query = graphql`
       description
       keywords
     }
+    profile: sanityProfile {
+      name
+      location
+      job
+      education
+      aboutMe
+      skills {
+        title
+        skillType
+        icon {
+          asset {
+            gatsbyImageData(height: 96, width: 96)
+          }
+        }
+      }
+    }
   }
 `;
 
 const IndexPage = (props) => {
   const { data, errors } = props;
-
+  console.log(data);
   if (errors) {
     return (
       <Layout>
@@ -33,13 +49,13 @@ const IndexPage = (props) => {
   }
 
   const site = (data || {}).site;
+  const profile = (data || {}).profile;
 
   if (!site) {
     throw new Error(
       'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
     );
   }
-
   return (
     <>
       <SEO
@@ -48,7 +64,7 @@ const IndexPage = (props) => {
         keywords={site.keywords}
       />
       <Header transparent="true" />
-      <Profile />
+      <Profile profile={profile} />
       <Footer />
     </>
   );

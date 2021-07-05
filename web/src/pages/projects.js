@@ -43,11 +43,10 @@ export const query = graphql`
 
 const Projects = (props) => {
   const { data, errors } = props;
-  console.log("Queried data:", data);
   const projectNodes = (data || {}).projects
     ? mapEdgesToNodes(data.projects)
     : [];
-  console.log("Queried nodes:", projectNodes);
+
   if (errors) {
     return (
       <Layout>
@@ -55,13 +54,12 @@ const Projects = (props) => {
       </Layout>
     );
   }
+
   return (
     <>
       <SEO title="My Projects" />
       <Header></Header>
-
       <Portfolio projects={projectNodes}></Portfolio>
-
       <Footer></Footer>
     </>
   );

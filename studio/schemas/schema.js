@@ -11,6 +11,7 @@ import post from "./documents/post";
 import siteSettings from "./documents/siteSettings";
 import project from "./documents/project";
 import skill from "./documents/skill";
+import profile from "./documents/profile";
 
 // Object types
 import bodyPortableText from "./objects/bodyPortableText";
@@ -29,6 +30,9 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     siteSettings,
+    profile,
+    project,
+    skill,
     post,
     category,
     author,
@@ -37,8 +41,6 @@ export default createSchema({
     bodyPortableText,
     bioPortableText,
     excerptPortableText,
-    project,
-    skill,
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
