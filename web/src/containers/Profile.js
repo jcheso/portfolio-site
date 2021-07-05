@@ -9,7 +9,9 @@ const Profile = (props) => {
   return (
     <>
       <main className="profile-page">
-        <HomeBackground backgroundImage={backgroundImage} />
+        <HomeBackground
+          backgroundImage={backgroundImage.asset.gatsbyImageData}
+        />
         <div className="py-16 bg-gray-300">
           <div className="container mx-auto px-4">
             <AboutMe
