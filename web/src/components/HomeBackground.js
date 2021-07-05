@@ -1,8 +1,9 @@
 import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const HomeBackground = ({ backgroundImage }) => {
-  const image = getImage(backgroundImage.asset.gatsbyImageData);
+const HomeBackground = (props) => {
+  console.log(props);
+  const image = getImage(props.backgroundImage.asset.gatsbyImageData);
   return (
     <section className="relative block" style={{ height: "500px" }}>
       <div>
