@@ -1,7 +1,5 @@
 import React from "react";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
-
-import ProjectCMS from "../components/projectCMS";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 var uniqid = require("uniqid");
 
 const AboutMe = (props) => {

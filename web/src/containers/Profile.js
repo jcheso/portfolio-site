@@ -4,13 +4,14 @@ import SkillsContainer from "./Skills";
 import HomeBackground from "../components/HomeBackground";
 
 const Profile = (props) => {
+  console.log(props);
   const profile = (props || {}).profile;
-  const backgroundImage = (props || {}).backgroundImage;
+
   return (
     <>
       <main className="profile-page">
         <HomeBackground
-          backgroundImage={backgroundImage.asset.gatsbyImageData}
+          backgroundImage={props.backgroundImage.asset.gatsbyImageData}
         />
         <div className="py-16 bg-gray-300">
           <div className="container mx-auto px-4">
