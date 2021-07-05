@@ -9,7 +9,7 @@ const HomeBackground = ({ backgroundImage }) => {
         <GatsbyImage
           className="absolute top-0 w-full h-full bg-center bg-cover bg-hero-pattern"
           image={image}
-          alt="text"
+          alt="Background Image"
         />
         <span
           id="blackOverlay"
