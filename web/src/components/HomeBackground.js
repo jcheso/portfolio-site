@@ -7,7 +7,7 @@ const HomeBackground = (props) => {
     <section className="relative block" style={{ height: "500px" }}>
       <div>
         <GatsbyImage
-          className="absolute top-0 w-full h-full bg-center bg-cover bg-hero-pattern"
+          className="absolute top-0 w-full h-full bg-center bg-cover bg-hero-pattern overflow-hidden"
           image={image}
           alt="Background Image"
         />
@@ -17,7 +17,7 @@ const HomeBackground = (props) => {
         ></span>
       </div>
       <div
-        className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+        className="top-auto bottom-0 left-0 right-0 w-full h-full absolute pointer-events-none overflow-hidden"
         style={{ height: "70px" }}
       >
         <svg
