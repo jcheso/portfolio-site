@@ -7,14 +7,13 @@ const HomeBackground = (props) => {
   const image = getImage(props.backgroundImage);
   const bgImage = convertToBgImage(image);
   return (
-    <section className="relative block " style={{ height: "500px" }}>
+    <section className="relative block" style={{ height: "500px" }}>
       <BackgroundImage
         Tag="section"
         className="absolute top-0 w-full h-full bg-center bg-cover bg-hero-pattern" // Spread bgImage into BackgroundImage:
         {...bgImage}
-        preserveStackingContext
       >
-        <div style={{ minHeight: 1000, minWidth: 1000 }}>
+        <div>
           <span
             id="blackOverlay"
             className="w-full h-full absolute opacity-50 bg-black"
