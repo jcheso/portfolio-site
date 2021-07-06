@@ -3,8 +3,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 function AuthorList({ items, title }) {
   return (
-    <div className="mt-6 mb-3">
-      <h2 className="text-l pt-4 pb-2 font-bold leading-normal text-gray-800">
+    <div className="mb-4">
+      <h2 className="text-l mt-2 pt-2 pb-2 font-bold leading-normal text-gray-800">
         {title}
       </h2>
       <ul className="m-0 p-0 list-none">
