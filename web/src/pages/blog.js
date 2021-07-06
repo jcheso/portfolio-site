@@ -55,7 +55,9 @@ export const query = graphql`
           id
           publishedAt
           mainImage {
-            ...SanityImage
+            asset {
+              gatsbyImageData
+            }
             alt
           }
           title
@@ -92,7 +94,7 @@ const BlogPage = (props) => {
       'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
     );
   }
-
+  console.log(postNodes);
   return (
     <>
       <SEO

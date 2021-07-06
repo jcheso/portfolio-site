@@ -17,7 +17,9 @@ export const query = graphql`
         title
       }
       mainImage {
-        ...SanityImage
+        asset {
+          gatsbyImageData
+        }
         alt
       }
       title
@@ -30,21 +32,8 @@ export const query = graphql`
         _key
         author {
           image {
-            crop {
-              _key
-              _type
-              top
-              bottom
-              left
-              right
-            }
-            hotspot {
-              _key
-              _type
-              x
-              y
-              height
-              width
+            asset {
+              gatsbyImageData
             }
             asset {
               _id

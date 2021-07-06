@@ -5,8 +5,10 @@ import PortableText from "./portableText";
 import React from "react";
 import { format } from "date-fns";
 import { imageUrlFor } from "../lib/image-url";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 function BlogPostPreview(props) {
+  const image = getImage(props.mainImage.asset);
   return (
     <Link
       className={props.isInList ? styles.inList : styles.inGrid}
@@ -16,13 +18,9 @@ function BlogPostPreview(props) {
         <div className="lg:p-8 p-4 mb-4">
           <div>
             {props.mainImage && props.mainImage.asset && (
-              <img
-                className="rounded-2xl"
-                src={imageUrlFor(buildImageObj(props.mainImage))
-                  .width(4032)
-                  .height(Math.floor((9 / 16) * 4032))
-                  .auto("format")
-                  .url()}
+              <GatsbyImage
+                className="rounded-2xl h-auto w-auto"
+                image={image}
                 alt={props.mainImage.alt}
               />
             )}
