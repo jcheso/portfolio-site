@@ -9,7 +9,7 @@ const Profile = (props) => {
 
   return (
     <>
-      <main className="profile-page">
+      <main>
         <HomeBackground
           backgroundImage={backgroundImage.asset.gatsbyImageData}
         />

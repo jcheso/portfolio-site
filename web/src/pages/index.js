@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import GraphQLErrorList from "../components/graphql-error-list";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import Layout from "../containers/layout";
 import Header from "../components/header";
 import Profile from "../containers/Profile";
@@ -16,7 +16,7 @@ export const query = graphql`
       title
       backgroundImage {
         asset {
-          gatsbyImageData
+          gatsbyImageData(placeholder: BLURRED)
         }
       }
       subtitle
@@ -27,7 +27,7 @@ export const query = graphql`
       name
       portrait {
         asset {
-          gatsbyImageData
+          gatsbyImageData(height: 500, placeholder: BLURRED)
         }
       }
       location
@@ -67,7 +67,7 @@ const IndexPage = (props) => {
 
   return (
     <>
-      <SEO
+      <Seo
         title={site.title}
         description={site.description}
         keywords={site.keywords}

@@ -1,10 +1,9 @@
 import * as styles from "./blog-post-preview.module.css";
-import { buildImageObj, cn, getBlogUrl } from "../lib/helpers";
+import { getBlogUrl } from "../lib/helpers";
 import { Link } from "gatsby";
 import PortableText from "./portableText";
 import React from "react";
 import { format } from "date-fns";
-import { imageUrlFor } from "../lib/image-url";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 function BlogPostPreview(props) {
@@ -19,7 +18,7 @@ function BlogPostPreview(props) {
           <div>
             {props.mainImage && props.mainImage.asset && (
               <GatsbyImage
-                className="rounded-2xl h-auto w-auto"
+                className="rounded-2xl "
                 image={image}
                 alt={props.mainImage.alt}
               />

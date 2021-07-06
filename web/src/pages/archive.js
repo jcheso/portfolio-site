@@ -3,12 +3,11 @@ import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
 import Layout from "../containers/layout";
 import React from "react";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import { graphql } from "gatsby";
 import { mapEdgesToNodes } from "../lib/helpers";
 import Header from "../components/header";
 import Footer from "../components/Footer";
-import { responsiveTitle1 } from "../components/typography.module.css";
 
 export const query = graphql`
   query ArchivePageQuery {
@@ -21,7 +20,9 @@ export const query = graphql`
           id
           publishedAt
           mainImage {
-            ...SanityImage
+             asset {
+                gatsbyImageData(placeholder: BLURRED)
+             }
             alt
           }
           title
@@ -50,7 +51,7 @@ const ArchivePage = (props) => {
 
   return (
     <>
-      <SEO title="Archive" />
+      <Seo title="Archive" />
       <Header></Header>
       <Container>
         <h1 className="pl-4 my-8 text-2xl font-bold leading-normal mb-8 text-gray-800 uppercase">

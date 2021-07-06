@@ -1,5 +1,4 @@
 import React from "react";
-import { Icon, InlineIcon } from "@iconify/react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 var uniqid = require("uniqid");
 

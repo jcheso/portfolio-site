@@ -1,15 +1,11 @@
 import React from "react";
 import { graphql } from "gatsby";
 import GraphQLErrorList from "../components/graphql-error-list";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import Header from "../components/header";
 import Footer from "../components/Footer";
 import Portfolio from "../containers/Portfolio";
-import {
-  filterOutDocsPublishedInTheFuture,
-  filterOutDocsWithoutSlugs,
-  mapEdgesToNodes,
-} from "../lib/helpers";
+import { mapEdgesToNodes } from "../lib/helpers";
 import Layout from "../containers/layout";
 
 import "../styles/layout.css";
@@ -26,13 +22,14 @@ export const query = graphql`
           skills {
             icon {
               asset {
-                gatsbyImageData
+                gatsbyImageData(placeholder: BLURRED)
               }
             }
           }
           previewImage {
             asset {
-              gatsbyImageData
+              gatsbyImageData(placeholder: BLURRED)
+        
             }
           }
         }
@@ -57,7 +54,7 @@ const Projects = (props) => {
 
   return (
     <>
-      <SEO title="My Projects" />
+      <Seo title="My Projects" />
       <Header></Header>
       <Portfolio projects={projectNodes}></Portfolio>
       <Footer></Footer>

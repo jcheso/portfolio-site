@@ -8,7 +8,7 @@ import {
 import BlogPostPreviewList from "../components/blog-post-preview-list";
 import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import Layout from "../containers/layout";
 import Header from "../components/header";
 import Footer from "../components/Footer";
@@ -56,7 +56,7 @@ export const query = graphql`
           publishedAt
           mainImage {
             asset {
-              gatsbyImageData
+              gatsbyImageData(placeholder: BLURRED)
             }
             alt
           }
@@ -97,7 +97,7 @@ const BlogPage = (props) => {
   console.log(postNodes);
   return (
     <>
-      <SEO
+      <Seo
         title={"My Blog"}
         description={"A place to record my adventures"}
         keywords={site.keywords}
