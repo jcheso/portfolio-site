@@ -12,9 +12,10 @@ const AboutMe = (props) => {
             <div className="relative">
               <GatsbyImage
                 key={uniqid()}
-                className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-18"
+                className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-20"
                 image={portrait}
                 alt="Portrait Photo"
+                style={{ maxWidth: "150px" }}
               />
             </div>
           </div>
