@@ -1,4 +1,3 @@
-import * as styles from "./blog-post.module.css";
 import { differenceInDays, formatDistance, format } from "date-fns";
 import AuthorList from "./author-list";
 import Container from "./container";
@@ -13,12 +12,8 @@ function BlogPost(props) {
   return (
     <article>
       {mainImage && mainImage.asset && (
-        <div className="block relative bg-gray-300 object-scale-down	">
-          <GatsbyImage
-            className="h-auto w-auto lg:max-w"
-            image={image}
-            alt={props.mainImage.alt}
-          />
+        <div className="block relative bg-gray-300">
+          <GatsbyImage className="" image={image} alt={props.mainImage.alt} />
         </div>
       )}
       <Container>
