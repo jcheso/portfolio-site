@@ -4,12 +4,12 @@ import Helmet from "react-helmet";
 import { graphql, useStaticQuery } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 
-function SEO({ description, lang, meta, keywords, title, image }) {
+function SEO({ description, lang, meta, keywords, title }) {
   const { site } = useStaticQuery(detailsQuery) || {};
   const metaDescription = description || site.description || "";
   const siteTitle = site.title || "";
-  const siteAuthor = site.author?.name || "";
-  const metaImage = image?.asset ? getImage(image.asset.gatsbyImageData) : "";
+  const siteAuthor = site.author.name || "";
+  const metaImage = getImage(site.seoImage.asset.gatsbyImageData) || "";
 
   return (
     <Helmet
@@ -75,6 +75,7 @@ SEO.defaultProps = {
 
 SEO.propTypes = {
   description: PropTypes.string,
+  image: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
@@ -91,6 +92,11 @@ const detailsQuery = graphql`
       keywords
       author {
         name
+      }
+      seoImage {
+        asset {
+          gatsbyImageData
+        }
       }
     }
   }

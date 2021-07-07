@@ -42,5 +42,10 @@ export default {
       title: "Author",
       to: [{ type: "author" }],
     },
+    {
+      name: "seoImage",
+      type: "image",
+      title: "SEO Image",
+    },
   ],
 };
