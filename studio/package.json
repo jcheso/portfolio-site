@@ -3,7 +3,7 @@
   "name": "blog-with-gatsby-studio",
   "version": "1.0.15",
   "main": "package.json",
-  "author": "Sanity <hello@sanity.io>",
+  "author": "Jarryd Cheso",
   "scripts": {
     "dev": "sanity start",
     "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",

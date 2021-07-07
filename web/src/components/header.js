@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 
 const Header = (props) => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -111,7 +112,7 @@ const Header = (props) => {
                 </a>
               </li>
               <li className="flex items-center">
-                <a
+                <OutboundLink
                   className={
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
@@ -129,10 +130,10 @@ const Header = (props) => {
                     }
                   />
                   <span className="lg:hidden inline-block ml-2">Instagram</span>
-                </a>
+                </OutboundLink>
               </li>
               <li className="flex items-center">
-                <a
+                <OutboundLink
                   className={
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
@@ -150,10 +151,10 @@ const Header = (props) => {
                     }
                   />
                   <span className="lg:hidden inline-block ml-2">YouTube</span>
-                </a>
+                </OutboundLink>
               </li>
               <li className="flex items-center">
-                <a
+                <OutboundLink
                   className={
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
@@ -171,11 +172,11 @@ const Header = (props) => {
                     }
                   />
                   <span className="lg:hidden inline-block ml-2">LinkedIn</span>
-                </a>
+                </OutboundLink>
               </li>
 
               <li className="flex items-center">
-                <a
+                <OutboundLink
                   className={
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
@@ -193,10 +194,10 @@ const Header = (props) => {
                     }
                   />
                   <span className="lg:hidden inline-block ml-2">GitHub</span>
-                </a>
+                </OutboundLink>
               </li>
               <li className="flex items-center">
-                <a
+                <OutboundLink
                   className={
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
@@ -214,7 +215,7 @@ const Header = (props) => {
                     }
                   />
                   <span className="lg:hidden inline-block ml-2">Email</span>
-                </a>
+                </OutboundLink>
               </li>
 
               {/* <li className="flex items-center">
