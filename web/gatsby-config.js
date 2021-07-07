@@ -65,5 +65,17 @@ module.exports = {
         overlayDrafts: !isProd,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Jarryd Cheso`,
+        short_name: `JC`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `../web/src/assets/img/favicon.ico`,
+      },
+    },
   ],
 };

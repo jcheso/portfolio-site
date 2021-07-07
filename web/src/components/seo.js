@@ -9,7 +9,7 @@ function SEO({ description, lang, meta, keywords, title }) {
   const metaDescription = description || site.description || "";
   const siteTitle = site.title || "";
   const siteAuthor = site.author.name || "";
-  const metaImage = getImage(site.seoImage.asset.gatsbyImageData) || "";
+  const seoImage = getImage(site.seoImage.asset.gatsbyImageData) || "";
 
   return (
     <Helmet
@@ -35,7 +35,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           property: "og:image",
-          content: metaImage,
+          content: seoImage,
         },
         {
           name: "twitter:card",
@@ -75,7 +75,6 @@ SEO.defaultProps = {
 
 SEO.propTypes = {
   description: PropTypes.string,
-  image: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
