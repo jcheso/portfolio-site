@@ -76,15 +76,6 @@ module.exports = {
         theme_color: `#a2466c`,
         display: `standalone`,
         icon: `../web/src/assets/img/android-chrome-512x512.png`,
-        cache_busting_mode: "none",
-      },
-    },
-    {
-      resolve: "gatsby-plugin-offline",
-      options: {
-        workboxConfig: {
-          globPatterns: ["**/icon-path*"],
-        },
       },
     },
   ],

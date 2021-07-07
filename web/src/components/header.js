@@ -57,7 +57,7 @@ const Header = (props) => {
                       : "text-gray-800 hover:text-gray-600") +
                     " px-3 py-4 lg:py-2 flex items-center text-xs w-full  uppercase font-bold"
                   }
-                  to="/projects"
+                  to="/projects/"
                 >
                   <i
                     className={
@@ -79,7 +79,7 @@ const Header = (props) => {
                       : "text-gray-800 hover:text-gray-600") +
                     " px-3 py-4 lg:py-2 flex items-center text-xs w-full uppercase font-bold"
                   }
-                  to="/blog"
+                  to="/blog/"
                 >
                   <i
                     className={
