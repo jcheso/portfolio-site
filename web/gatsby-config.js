@@ -11,6 +11,7 @@ module.exports = {
   siteMetadata: {
     // If you didn't use the resolveSiteUrl option this needs to be set
     siteUrl: `https://www.jarrydcheso.me`,
+    image: `../web/src/assets/img/android-chrome-512x512.png`,
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -74,7 +75,16 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: `../web/src/assets/img/favicon.ico`,
+        icon: `../web/src/assets/img/android-chrome-512x512.png`,
+        cache_busting_mode: "none",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-offline",
+      options: {
+        workboxConfig: {
+          globPatterns: ["**/icon-path*"],
+        },
       },
     },
   ],
