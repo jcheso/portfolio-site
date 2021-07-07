@@ -1,5 +1,7 @@
 import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
+
 var uniqid = require("uniqid");
 
 const ProjectCMS = (props) => {
