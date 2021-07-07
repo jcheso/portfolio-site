@@ -4,7 +4,7 @@ var uniqid = require("uniqid");
 
 const ProjectCMS = (props) => {
   return (
-    <a href={props.link}>
+    <OutboundLink href={props.link}>
       <div className="p-10 m-4 bg-gray-50 shadow-xl rounded-2xl md:w-96">
         <div className="text-xl lg:text-xl font-bold leading-normal text-gray-800 uppercase text-center">
           {props.title}
@@ -38,7 +38,7 @@ const ProjectCMS = (props) => {
           {props.description}
         </div>
       </div>
-    </a>
+    </OutboundLink>
   );
 };
 
