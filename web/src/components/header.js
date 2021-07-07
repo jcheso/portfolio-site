@@ -17,6 +17,7 @@ const Header = (props) => {
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
+              aria-label="Home"
               className={
                 (props.transparent ? "text-white" : "text-gray-800") +
                 " text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
@@ -49,6 +50,7 @@ const Header = (props) => {
             <ul className="flex flex-col lg:flex-row list-none mr-auto">
               <li className="flex items-center">
                 <Link
+                  aria-label="My Projects"
                   className={
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
@@ -70,6 +72,7 @@ const Header = (props) => {
               </li>
               <li className="flex items-center">
                 <Link
+                  aria-label="My Blog"
                   className={
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
@@ -92,7 +95,8 @@ const Header = (props) => {
             </ul>
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="flex items-center">
-                <a
+                <OutboundLink
+                  aria-label="Facebook"
                   className={
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
@@ -110,10 +114,11 @@ const Header = (props) => {
                     }
                   />
                   <span className="lg:hidden inline-block ml-2">Facebook</span>
-                </a>
+                </OutboundLink>
               </li>
               <li className="flex items-center">
                 <OutboundLink
+                  aria-label="Instagram"
                   className={
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
@@ -135,6 +140,7 @@ const Header = (props) => {
               </li>
               <li className="flex items-center">
                 <OutboundLink
+                  aria-label="YouTube"
                   className={
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
@@ -156,6 +162,7 @@ const Header = (props) => {
               </li>
               <li className="flex items-center">
                 <OutboundLink
+                  aria-label="LinkedIn"
                   className={
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
@@ -178,6 +185,7 @@ const Header = (props) => {
 
               <li className="flex items-center">
                 <OutboundLink
+                  aria-label="GitHub"
                   className={
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
@@ -199,6 +207,7 @@ const Header = (props) => {
               </li>
               <li className="flex items-center">
                 <OutboundLink
+                  aria-label="Email Me"
                   className={
                     (props.transparent
                       ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
