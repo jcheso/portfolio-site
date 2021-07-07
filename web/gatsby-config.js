@@ -8,6 +8,10 @@ const clientConfig = require("./client-config");
 const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
+  siteMetadata: {
+    // If you didn't use the resolveSiteUrl option this needs to be set
+    siteUrl: `https://www.jarrydcheso.me`,
+  },
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
@@ -18,7 +22,9 @@ module.exports = {
         path: `${__dirname}/src/assets/img`,
       },
     },
-    "gatsby-transformer-sharp", // Needed for dynamic imagese for dynamic images
+    "gatsby-transformer-sharp",
+    `gatsby-plugin-sitemap`,
+    // Needed for dynamic images for dynamic images
     "gatsby-plugin-sharp",
     "gatsby-plugin-postcss",
     {
