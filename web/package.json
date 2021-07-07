@@ -4,7 +4,7 @@
   "version": "1.0.7",
   "author": "Jarryd Cheso",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby clean && gatsby build",
     "clean-cache": "gatsby clean",
     "dev": "gatsby develop",
     "lint": "eslint .",
@@ -27,7 +27,6 @@
     "gatsby-plugin-google-gtag": "^3.9.0",
     "gatsby-plugin-image": "^1.8.0",
     "gatsby-plugin-manifest": "^3.9.0",
-    "gatsby-plugin-offline": "^4.9.0",
     "gatsby-plugin-postcss": "^4.0.0",
     "gatsby-plugin-react-helmet": "^4.0.0",
     "gatsby-plugin-sharp": "^3.8.0",

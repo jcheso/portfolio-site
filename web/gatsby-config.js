@@ -11,7 +11,6 @@ module.exports = {
   siteMetadata: {
     // If you didn't use the resolveSiteUrl option this needs to be set
     siteUrl: `https://www.jarrydcheso.me`,
-    image: `../web/src/assets/img/android-chrome-512x512.png`,
   },
   plugins: [
     "gatsby-plugin-react-helmet",
