@@ -94,16 +94,15 @@ const BlogPage = (props) => {
       'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
     );
   }
-  console.log(postNodes);
   return (
-    <>
+    <div className="flex flex-col justify-between h-screen">
       <Seo
         title={"My Blog"}
-        description={"A place to record my adventures"}
+        description={"A place to record my thoughts."}
         keywords={site.keywords}
       />
       <Header />
-      <Container>
+      <Container className="relative flex-grow">
         {postNodes && (
           <BlogPostPreviewList
             title="Latest blog posts"
@@ -113,7 +112,7 @@ const BlogPage = (props) => {
         )}
       </Container>
       <Footer />
-    </>
+    </div>
   );
 };
 

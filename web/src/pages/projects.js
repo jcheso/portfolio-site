@@ -29,7 +29,6 @@ export const query = graphql`
           previewImage {
             asset {
               gatsbyImageData(placeholder: BLURRED)
-        
             }
           }
         }
@@ -53,12 +52,18 @@ const Projects = (props) => {
   }
 
   return (
-    <>
-      <Seo title="My Projects" />
+    <div className="flex flex-col justify-between h-screen">
+      <Seo
+        title="My Projects"
+        description={"A place to showcase my projects"}
+      />
       <Header></Header>
-      <Portfolio projects={projectNodes}></Portfolio>
+      <Portfolio
+        className="relative flex-grow"
+        projects={projectNodes}
+      ></Portfolio>
       <Footer></Footer>
-    </>
+    </div>
   );
 };
 

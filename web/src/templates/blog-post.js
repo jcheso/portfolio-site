@@ -50,7 +50,7 @@ const BlogPostTemplate = (props) => {
   const { data, errors } = props;
   const post = data && data.post;
   return (
-    <Layout>
+    <Layout className="flex flex-col justify-between h-screen">
       {errors && <Seo title="GraphQL Error" />}
       {post && (
         <Seo
@@ -61,7 +61,7 @@ const BlogPostTemplate = (props) => {
       )}
 
       {errors && (
-        <Container>
+        <Container className="relative flex-grow">
           <GraphQLErrorList errors={errors} />
         </Container>
       )}

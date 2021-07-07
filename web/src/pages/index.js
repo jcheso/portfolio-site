@@ -66,16 +66,20 @@ const IndexPage = (props) => {
   }
 
   return (
-    <>
+    <div className="flex flex-col justify-between h-screen">
       <Seo
         title={site.title}
         description={site.description}
         keywords={site.keywords}
       />
       <Header transparent="true" />
-      <Profile profile={profile} backgroundImage={site.backgroundImage} />
+      <Profile
+        className="relative flex-grow"
+        profile={profile}
+        backgroundImage={site.backgroundImage}
+      />
       <Footer />
-    </>
+    </div>
   );
 };
 

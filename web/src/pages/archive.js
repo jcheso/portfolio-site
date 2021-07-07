@@ -20,9 +20,9 @@ export const query = graphql`
           id
           publishedAt
           mainImage {
-             asset {
-                gatsbyImageData(placeholder: BLURRED)
-             }
+            asset {
+              gatsbyImageData(placeholder: BLURRED)
+            }
             alt
           }
           title
@@ -50,10 +50,10 @@ const ArchivePage = (props) => {
   const postNodes = data && data.posts && mapEdgesToNodes(data.posts);
 
   return (
-    <>
+    <div className="flex flex-col justify-between h-screen">
       <Seo title="Archive" />
       <Header></Header>
-      <Container>
+      <Container className="relative flex-grow">
         <h1 className="pl-4 my-8 text-2xl font-bold leading-normal mb-8 text-gray-800 uppercase">
           Archive
         </h1>
@@ -62,7 +62,7 @@ const ArchivePage = (props) => {
         )}
       </Container>
       <Footer></Footer>
-    </>
+    </div>
   );
 };
 
