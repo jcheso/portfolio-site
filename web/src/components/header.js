@@ -29,6 +29,7 @@ const Header = (props) => {
               className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
+              aria-label="Open Navbar"
             >
               <i
                 className={
@@ -217,24 +218,6 @@ const Header = (props) => {
                   <span className="lg:hidden inline-block ml-2">Email</span>
                 </OutboundLink>
               </li>
-
-              {/* <li className="flex items-center">
-                <a href="mailto:jarryd.cheso@gmail.com">
-                  <button
-                    className={
-                      (props.transparent
-                        ? "bg-white text-gray-800 active:bg-gray-100"
-                        : "bg-pink-500 text-white active:bg-pink-600") +
-                      " text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
-                    }
-                    type="button"
-                    style={{ transition: "all .15s ease" }}
-                  >
-                    <i className="fas fa-arrow-alt-circle-down mr-1"></i>
-                    Contact Me
-                  </button>
-                </a>
-              </li> */}
             </ul>
           </div>
         </div>
