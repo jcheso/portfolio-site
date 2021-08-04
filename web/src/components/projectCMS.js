@@ -21,10 +21,10 @@ const ProjectCMS = (props) => {
         </div>
         <div>
           <ul className="flex flex-row justify-evenly">
-            {props.skills.map((skill, meta) => {
+            {props.skills.map((skill, index) => {
               const icon = getImage(skill.icon.asset.gatsbyImageData);
               return (
-                <li>
+                <li key={index}>
                   <GatsbyImage
                     className="h-10 w-10"
                     image={icon}

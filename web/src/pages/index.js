@@ -68,7 +68,7 @@ const IndexPage = (props) => {
   return (
     <div className="flex flex-col justify-between h-screen">
       <Seo
-        title={site.title}
+        title="About Me"
         description={site.description}
         keywords={site.keywords}
       />

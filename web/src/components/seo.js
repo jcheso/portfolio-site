@@ -1,102 +1,122 @@
 import React from "react";
+import { Helmet } from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
 import PropTypes from "prop-types";
-import Helmet from "react-helmet";
-import { graphql, useStaticQuery } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
 
-function SEO({ description, lang, meta, keywords, title, image }) {
-  const { site } = useStaticQuery(detailsQuery) || {};
-  const metaDescription = description || site.description || "";
-  const siteTitle = site.title || "";
-  const siteAuthor = site.author.name || "";
-  const seoImage = image || getImage(site.seoImage.asset.gatsbyImageData) || "";
+function SearchEngineOptimisation({
+  description,
+  lang,
+  meta,
+  title,
+  pathname,
+}) {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            author
+            keywords
+            siteUrl
+            image
+          }
+        }
+      }
+    `
+  );
+
+  const metaDescription = description || site.siteMetadata.description;
+  const image = site.siteMetadata.image;
+  const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null;
 
   return (
     <Helmet
-      htmlAttributes={{ lang }}
+      htmlAttributes={{
+        lang,
+      }}
       title={title}
-      titleTemplate={title === siteTitle ? "%s" : `%s | ${siteTitle}`}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      link={
+        canonical
+          ? [
+              {
+                rel: "canonical",
+                href: canonical,
+              },
+            ]
+          : []
+      }
       meta={[
         {
-          name: "description",
+          name: `description`,
           content: metaDescription,
         },
         {
-          property: "og:title",
+          name: "keywords",
+          content: site.siteMetadata.keywords,
+        },
+        {
+          property: `og:title`,
           content: title,
         },
         {
-          property: "og:description",
+          property: `og:description`,
           content: metaDescription,
         },
         {
-          property: "og:type",
-          content: "website",
+          property: `og:type`,
+          content: `website`,
         },
         {
+          name: `twitter:creator`,
+          content: site.siteMetadata.author,
+        },
+        {
+          name: `twitter:title`,
+          content: title,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
+        },
+
+        {
           property: "og:image",
-          content: seoImage,
+          content: image,
+        },
+        {
+          name: "twitter:card",
+          content: "summary_large_image",
         },
         {
           name: "twitter:card",
           content: "summary",
         },
         {
-          name: "twitter:creator",
-          content: siteAuthor,
+          name: "twitter:image",
+          content: image,
         },
-        {
-          name: "twitter:title",
-          content: title,
-        },
-        {
-          name: "twitter:description",
-          content: metaDescription,
-        },
-      ]
-        .concat(
-          keywords && keywords.length > 0
-            ? {
-                name: "keywords",
-                content: keywords.join(", "),
-              }
-            : []
-        )
-        .concat(meta)}
+      ].concat(meta)}
     />
   );
 }
-
-SEO.defaultProps = {
-  lang: "en",
+SearchEngineOptimisation.defaultProps = {
+  lang: `en`,
   meta: [],
-  keywords: [],
+  description: ``,
 };
-
-SEO.propTypes = {
+SearchEngineOptimisation.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
-  meta: PropTypes.array,
-  keywords: PropTypes.arrayOf(PropTypes.string),
+  meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  image: PropTypes.shape({
+    src: PropTypes.string.isRequired,
+    height: PropTypes.number.isRequired,
+    width: PropTypes.number.isRequired,
+  }),
+  pathname: PropTypes.string,
 };
-
-export default SEO;
-
-const detailsQuery = graphql`
-  query DefaultSEOQuery {
-    site: sanitySiteSettings {
-      title
-      description
-      keywords
-      author {
-        name
-      }
-      seoImage {
-        asset {
-          gatsbyImageData
-        }
-      }
-    }
-  }
-`;
+export default SearchEngineOptimisation;

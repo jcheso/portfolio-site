@@ -17,7 +17,7 @@ const SkillsContainer = (props) => {
         </div>
         <div className="mt-2 py-10 border-t border-gray-300 text-center">
           <div className="flex flex-wrap justify-center">
-            <div className="justify-evenly flex mb-4 w-full px-4 text-gray-800 flex-wrap">
+            <div className="justify-evenly flex-row grid grid-cols-3 md:flex mb-4 w-full px-4 text-gray-800 flex-wrap">
               {skills
                 .filter((skill) => skill.skillType === "frontend")
                 .map((filteredSkill, meta) => {
@@ -27,15 +27,15 @@ const SkillsContainer = (props) => {
                   return (
                     <div
                       key={uniqid()}
-                      className="flex flex-col mx-2 my-2 p-2 text-gray-800"
+                      className="flex flex-col justify-center items-center mx-2 my-2 p-2 text-gray-800"
                     >
                       <GatsbyImage
-                        className="w-24 h-24"
+                        className="md:w-24 md:h-24 h-12 w-12"
                         image={icon}
                         alt={filteredSkill.title}
                         key={uniqid()}
                       />
-                      <div className="pt-1 text-center">
+                      <div className="pt-1 text-center text-sm md:text-base">
                         {filteredSkill.title}
                       </div>
                     </div>
@@ -49,7 +49,7 @@ const SkillsContainer = (props) => {
         </div>
         <div className="mt-2 py-10 border-t border-gray-300 text-center">
           <div className="flex flex-wrap justify-center">
-            <div className="justify-evenly flex mb-4 w-full px-4 text-gray-800 flex-wrap">
+            <div className="justify-evenly flex-row grid grid-cols-3 md:flex mb-4 w-full px-4 text-gray-800 flex-wrap">
               {skills
                 .filter((skill) => skill.skillType === "backend")
                 .map((filteredSkill, meta) => {
@@ -57,14 +57,17 @@ const SkillsContainer = (props) => {
                     filteredSkill.icon.asset.gatsbyImageData
                   );
                   return (
-                    <div key={uniqid()} className="flex flex-col mx-2 my-2 p-2">
+                    <div
+                      key={uniqid()}
+                      className="flex flex-col justify-center items-center mx-2 my-2 p-2 text-gray-800"
+                    >
                       <GatsbyImage
-                        className="w-24 h-24"
+                        className="md:w-24 md:h-24 h-12 w-12"
                         image={icon}
                         alt={filteredSkill.title}
                         key={uniqid()}
                       />
-                      <div className="pt-1 text-center">
+                      <div className="pt-1 text-center text-sm md:text-base">
                         {filteredSkill.title}
                       </div>
                     </div>
@@ -78,7 +81,7 @@ const SkillsContainer = (props) => {
         </div>
         <div className="mt-2 py-10 border-t border-gray-300 text-center">
           <div className="flex flex-wrap justify-center">
-            <div className="justify-evenly flex mb-4 w-full px-4 text-gray-800 flex-wrap">
+            <div className="justify-evenly flex-row grid grid-cols-3 md:flex mb-4 w-full px-4 text-gray-800 flex-wrap">
               {skills
                 .filter((skill) => skill.skillType === "tools")
                 .map((filteredSkill, meta) => {
@@ -86,14 +89,17 @@ const SkillsContainer = (props) => {
                     filteredSkill.icon.asset.gatsbyImageData
                   );
                   return (
-                    <div key={uniqid()} className="flex flex-col mx-2 my-2 p-2">
+                    <div
+                      key={uniqid()}
+                      className="flex flex-col justify-center items-center mx-2 my-2 p-2 text-gray-800"
+                    >
                       <GatsbyImage
-                        className="w-24 h-24"
+                        className="md:w-24 md:h-24 h-12 w-12"
                         image={icon}
                         alt={filteredSkill.title}
                         key={uniqid()}
                       />
-                      <div className="pt-1 text-center">
+                      <div className="pt-1 text-center text-sm md:text-base">
                         {filteredSkill.title}
                       </div>
                     </div>

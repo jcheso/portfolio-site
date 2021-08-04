@@ -22,7 +22,7 @@ const AboutMe = (props) => {
           </div>
         </div>
         <div className="text-center lg:mt-6 mt-4 pt-20">
-          <h3 className="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2">
+          <h3 className="text-4xl font-semibold leading-normal mb-2 text-gray-800">
             {props.name}
           </h3>
           <div className="text-sm leading-normal  mb-2 text-gray-500 font-bold uppercase">

@@ -11,16 +11,31 @@ module.exports = {
   siteMetadata: {
     // If you didn't use the resolveSiteUrl option this needs to be set
     siteUrl: `https://www.jarrydcheso.me`,
+    title: "Jarryd Cheso",
+    description: "My Portfolio and Blog",
+    author: "Jarryd Cheso",
+    keywords:
+      "software, engineer, web, developer, imperial, college, react, gatsby, netlify, sanity, portfolio, blog",
+    image: "src/assets/img/android-chrome-512x512.png",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
     {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.jarrydcheso.me/",
+        sitemap: "https://www.jarrydcheso.me/sitemap/sitemap-index.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: `${__dirname}/src/assets/img`,
+        path: `${__dirname}/src/assets/img/`,
       },
+      __key: "img",
     },
     "gatsby-transformer-sharp",
     `gatsby-plugin-sitemap`,
@@ -74,8 +89,9 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: `../web/src/assets/img/android-chrome-512x512.png`,
+        icon: `src/assets/img/android-chrome-512x512.png`,
       },
     },
+    "gatsby-plugin-offline",
   ],
 };
