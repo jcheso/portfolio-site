@@ -16,7 +16,7 @@ module.exports = {
     author: "Jarryd Cheso",
     keywords:
       "software, engineer, web, developer, imperial, college, react, gatsby, netlify, sanity, portfolio, blog",
-    image: "src/assets/img/android-chrome-512x512.png",
+    image: "../../seo-image-JC-icon.png",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -84,7 +84,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Jarryd Cheso`,
-        short_name: `JC`,
+        short_name: `Jarryd Cheso`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,

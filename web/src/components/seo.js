@@ -29,6 +29,7 @@ function SearchEngineOptimisation({
 
   const metaDescription = description || site.siteMetadata.description;
   const image = site.siteMetadata.image;
+  console.log(image);
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null;
 
   return (
