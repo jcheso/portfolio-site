@@ -8,7 +8,7 @@ const ProjectCMS = (props) => {
   return (
     <OutboundLink href={props.link}>
       <div className="p-6 m-4 bg-gray-50 shadow-xl rounded-2xl md:w-96 hover:bg-gray-100 flex flex-col ">
-        <div className="text-xl lg:text-xl font-bold leading-normal text-gray-800 uppercase text-center flex-grow">
+        <div className="text-xl lg:text-xl font-bold leading-normal text-gray-800  text-center">
           {props.title}
         </div>
         <div>
@@ -20,13 +20,13 @@ const ProjectCMS = (props) => {
           />
         </div>
         <div>
-          <ul className="grid grid-cols-4">
+          <ul className="flex flex-wrap justify-evenly">
             {props.skills.map((skill, index) => {
               const icon = getImage(skill.icon.asset.gatsbyImageData);
               return (
                 <li key={index}>
                   <GatsbyImage
-                    className="h-10 w-10 m-2"
+                    className="h-10 w-10 m-1"
                     image={icon}
                     alt="text"
                     key={uniqid()}
@@ -36,7 +36,7 @@ const ProjectCMS = (props) => {
             })}
           </ul>
         </div>
-        <div className="text-justify text-sm leading-normal mt-4 mb-2 h-16 text-gray-800 flex-grow">
+        <div className="text-justify text-sm leading-normal mt-4 mb-2 h-16 text-gray-800">
           {props.description}
         </div>
       </div>
