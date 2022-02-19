@@ -22,7 +22,6 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.22.0",
     "gatsby-plugin-postcss": "^5.7.0",
-    "lerna": "^3.13.1",
     "postcss": "^8.4.6",
     "postcss-preset-env": "^7.4.1",
     "prettier": "^2.3.1",
