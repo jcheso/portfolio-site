@@ -49,3 +49,13 @@ async function createBlogPostPages(graphql, actions) {
 exports.createPages = async ({ graphql, actions }) => {
   await createBlogPostPages(graphql, actions);
 };
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      fallback: {
+        fs: false,
+      },
+    },
+  });
+};
