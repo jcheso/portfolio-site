@@ -1,37 +1,71 @@
 import React from "react";
-import { Icon, InlineIcon } from "@iconify/react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
+import { BsStack } from "react-icons/bs";
 var uniqid = require("uniqid");
 
-const Project = ({ img, title, skillsList, description, link }) => {
+const ProjectCMS = (props) => {
   return (
-    <a href={link} id={uniqid()}>
-      <div className="p-10 m-4 bg-gray-50 shadow-xl rounded-2xl md:w-96">
-        <div className="text-xl lg:text-xl font-bold leading-normal mb-8 text-gray-800 uppercase text-center">
-          {title}
-        </div>
-        <div>
-          <img className="rounded-2xl" src={img} />
-        </div>
-        <div>
-          <ul className="flex flex-row justify-evenly">
-            {skillsList.map((icon, meta) => (
-              <li>
-                <Icon
-                  className="h-8 w-8 mt-8 mb-2"
-                  key={meta}
-                  icon={icon}
-                ></Icon>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="text-center text-sm leading-normal my-8 text-gray-800 h-12">
-          {description}
+    <div className="p-4 md:w-1/3">
+      <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+        <GatsbyImage
+          className="lg:h-96 md:h-36 w-full object-cover object-center"
+          image={props.img}
+          alt="blog"
+        />
+        <div className="p-6">
+          {/* <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+            CATEGORY
+          </h2> */}
+          <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+            {props.title}
+          </h1>
+          <p className="leading-relaxed mb-3 h-28">{props.description}</p>
+          <div className="flex items-center flex-wrap ">
+            <OutboundLink
+              href={props.link}
+              className="text-blue-500 inline-flex items-center md:mb-2 lg:mb-0"
+            >
+              Learn More
+              <svg
+                className="w-6 h-6 ml-2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </OutboundLink>
+            <span className="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+              <BsStack className="w-6 h-6 mr-1"></BsStack>
+              Tech Stack
+            </span>
+            <span className="text-gray-400 inline-flex items-center leading-none text-sm">
+              <ul className="flex flex-wrap justify-evenly">
+                {props.skills.map((skill, index) => {
+                  const icon = getImage(skill.icon.asset.gatsbyImageData);
+                  return (
+                    <li key={index}>
+                      <GatsbyImage
+                        className="w-6 h-6 mr-1"
+                        image={icon}
+                        alt="text"
+                        key={uniqid()}
+                      />
+                    </li>
+                  );
+                })}
+              </ul>
+            </span>
+          </div>
         </div>
       </div>
-    </a>
+    </div>
   );
 };
 
-export default Project;
+export default ProjectCMS;

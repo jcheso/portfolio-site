@@ -1,6 +1,6 @@
 import React from "react";
 import { getImage } from "gatsby-plugin-image";
-import ProjectCMS from "../components/projectCMS";
+import ProjectCMS from "../components/project";
 var uniqid = require("uniqid");
 
 const Portfolio = (props) => {
