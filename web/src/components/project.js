@@ -40,29 +40,27 @@ const ProjectCMS = (props) => {
                 <path d="M12 5l7 7-7 7"></path>
               </svg>
             </OutboundLink>
-            <div className="pt-2 md:pt-0">
-              <span className="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                <BsStack className="w-4 h-4 md:w-6 md:h-6 mr-1"></BsStack>
-                Tech Stack
-              </span>
-              <span className="text-gray-400 inline-flex items-center leading-none text-sm">
-                <ul className="flex flex-wrap justify-evenly">
-                  {props.skills.map((skill, index) => {
-                    const icon = getImage(skill.icon.asset.gatsbyImageData);
-                    return (
-                      <li key={index}>
-                        <GatsbyImage
-                          className="w-4 h-4 md:w-6 md:h-6 mr-1"
-                          image={icon}
-                          alt="skill icon"
-                          key={uniqid()}
-                        />
-                      </li>
-                    );
-                  })}
-                </ul>
-              </span>
-            </div>
+            <span className="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+              <BsStack className="w-4 h-4 md:w-6 md:h-6 mr-1"></BsStack>
+              Tech Stack
+            </span>
+            <span className="text-gray-400 inline-flex items-center leading-none text-sm mt-2 md:mt-0">
+              <ul className="flex flex-wrap justify-evenly">
+                {props.skills.map((skill, index) => {
+                  const icon = getImage(skill.icon.asset.gatsbyImageData);
+                  return (
+                    <li key={index}>
+                      <GatsbyImage
+                        className="w-4 h-4 md:w-6 md:h-6 mr-1"
+                        image={icon}
+                        alt="skill icon"
+                        key={uniqid()}
+                      />
+                    </li>
+                  );
+                })}
+              </ul>
+            </span>
           </div>
         </div>
       </div>
