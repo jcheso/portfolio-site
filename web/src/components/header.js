@@ -70,7 +70,7 @@ const Header = (props) => {
                   My Projects
                 </Link>
               </li>
-              <li className="flex items-center">
+              {/* <li className="flex items-center">
                 <Link
                   aria-label="My Blog"
                   className={
@@ -91,10 +91,10 @@ const Header = (props) => {
                   />
                   My Blog
                 </Link>
-              </li>
+              </li> */}
             </ul>
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              <li className="flex items-center">
+              {/* <li className="flex items-center">
                 <OutboundLink
                   aria-label="Facebook"
                   className={
@@ -159,7 +159,7 @@ const Header = (props) => {
                   />
                   <span className="lg:hidden inline-block ml-2">YouTube</span>
                 </OutboundLink>
-              </li>
+              </li> */}
               <li className="flex items-center">
                 <OutboundLink
                   aria-label="LinkedIn"
