@@ -6,7 +6,7 @@ var uniqid = require("uniqid");
 
 const ProjectCMS = (props) => {
   return (
-    <div className="p-4 md:w-1/3">
+    <div className="p-4 md:w-1/3 lg:w-1/5">
       <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
         <GatsbyImage
           className="lg:h-96 md:h-36 w-full object-cover object-center"
@@ -21,7 +21,7 @@ const ProjectCMS = (props) => {
             {props.title}
           </h1>
           <p className="leading-relaxed mb-3 md:h-28">{props.description}</p>
-          <div className="flex items-center flex-wrap ">
+          <div className="flex items-center flex-wrap pt-2 ">
             <OutboundLink
               href={props.link}
               className="text-blue-500 inline-flex items-center md:mb-2 lg:mb-0"
