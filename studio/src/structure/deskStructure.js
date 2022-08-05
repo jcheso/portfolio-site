@@ -76,34 +76,13 @@ export default () =>
         .icon(MdWhatshot)
         .schemaType("skill")
         .child(S.documentTypeList("skill").title("My Skills")),
-      S.listItem()
-        .title("Blog Posts")
-        .icon(MdDescription)
-        .schemaType("post")
-        .child(S.documentTypeList("post").title("Blog Posts")),
-      S.listItem()
-        .title("Authors")
-        .icon(MdPerson)
-        .schemaType("author")
-        .child(S.documentTypeList("author").title("Authors")),
-      S.listItem()
-        .title("Categories")
-        .icon(MdLocalOffer)
-        .schemaType("category")
-        .child(S.documentTypeList("category").title("Categories")),
       // `S.documentTypeListItems()` returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above.
       ...S.documentTypeListItems().filter(
         (listItem) =>
-          ![
-            "category",
-            "author",
-            "post",
-            "siteSettings",
-            "profile",
-            "project",
-            "skill",
-          ].includes(listItem.getId())
+          !["siteSettings", "profile", "project", "skill"].includes(
+            listItem.getId()
+          )
       ),
     ]);
