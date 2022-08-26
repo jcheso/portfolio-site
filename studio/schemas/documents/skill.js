@@ -1,26 +1,26 @@
 export default {
-  name: "skill",
-  type: "document",
-  title: "Skills",
+  name: 'skill',
+  type: 'document',
+  title: 'Skills',
   fields: [
-    { name: "title", type: "string", title: "Title" },
+    { name: 'title', type: 'string', title: 'Title' },
     {
-      name: "icon",
-      type: "image",
-      title: "Icon",
+      name: 'icon',
+      type: 'image',
+      title: 'Icon',
     },
     {
-      name: "skillType",
-      type: "string",
-      title: "Type",
+      name: 'skillType',
+      type: 'string',
+      title: 'Type',
       options: {
         list: [
-          { title: "Frontend", value: "frontend" },
-          { title: "Backend", value: "backend" },
-          { title: "Tools and Services", value: "tools" },
+          { title: 'Frontend', value: 'frontend' },
+          { title: 'Backend', value: 'backend' },
+          { title: 'Tools and Services', value: 'tools' },
         ],
-        layout: "radio",
+        layout: 'radio',
       },
     },
   ],
-};
+}
