@@ -36,13 +36,6 @@ export default {
       },
     },
     {
-      name: "author",
-      type: "reference",
-      description: "Publish an author and set a reference to them here.",
-      title: "Author",
-      to: [{ type: "author" }],
-    },
-    {
       name: "seoImage",
       type: "image",
       title: "SEO Image",

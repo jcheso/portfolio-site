@@ -1,6 +1,7 @@
 {
   "private": true,
-  "name": "blog-with-gatsby-studio",
+  "name": "my-portfolio-studio",
+  "description": "My Portfolio Studio",
   "version": "1.0.15",
   "main": "package.json",
   "author": "Jarryd Cheso",
@@ -13,24 +14,24 @@
     "test": "sanity check"
   },
   "dependencies": {
-    "@sanity/base": "^2.7.4",
-    "@sanity/cli": "^2.12.2",
-    "@sanity/components": "^2.2.6",
-    "@sanity/core": "^2.7.4",
-    "@sanity/dashboard": "^2.7.0",
-    "@sanity/default-layout": "^2.7.4",
-    "@sanity/default-login": "^2.7.0",
-    "@sanity/desk-tool": "^2.7.4",
-    "@sanity/studio-hints": "^2.7.0",
+    "@sanity/base": "^2.31.0",
+    "@sanity/cli": "^2.31.0",
+    "@sanity/components": "^2.14.0",
+    "@sanity/core": "^2.31.0",
+    "@sanity/dashboard": "^2.31.0",
+    "@sanity/default-layout": "^2.31.0",
+    "@sanity/default-login": "^2.31.0",
+    "@sanity/desk-tool": "^2.31.0",
+    "@sanity/studio-hints": "^2.29.8",
     "date-fns": "^2.19.0",
     "eslint": "^7.29.0",
-    "gatsby-plugin-prettier-eslint": "^1.0.6",
     "prettier": "^2.3.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^3.11.0",
     "sanity-plugin-dashboard-widget-document-list": "^0.0.13",
-    "sanity-plugin-dashboard-widget-netlify": "^1.0.1"
+    "sanity-plugin-dashboard-widget-netlify": "^1.0.1",
+    "styled-components": "^5.3.5"
   }
 }
