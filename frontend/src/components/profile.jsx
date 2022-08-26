@@ -24,7 +24,7 @@ export const About = ({ profile }) => {
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center md:pt-0 pt-8">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             Hi there, I'm <br className="hidden lg:inline-block" />
-            <span className="text-red-500">{profile.name}</span>
+            <span className="text-red-500 animate-fade">{profile.name}</span>
           </h1>
           <div className="text-xs md:text-sm leading-normal mb-2 text-white font-medium flex align-middle flex-col">
             <span>
