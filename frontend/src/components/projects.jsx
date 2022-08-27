@@ -4,7 +4,7 @@ import { OutboundLink } from 'gatsby-plugin-google-gtag'
 import { FaLayerGroup, FaArrowRight } from 'react-icons/fa'
 
 export const Project = ({ project }) => {
-  const image = getImage(project.previewImage.asset.gatsbyImageData)
+  const image = getImage(project.previewImage.asset.gatsbyImage)
   return (
     <div className="p-4 md:w-1/3">
       <div className="h-full border-2 border-gray-800 rounded-lg overflow-hidden">

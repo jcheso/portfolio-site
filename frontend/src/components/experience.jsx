@@ -2,7 +2,7 @@ import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 export const ExperienceComponent = ({ experience }) => {
-  const logo = getImage(experience.logo.asset.gatsbyImageData)
+  const logo = getImage(experience.logo.asset.gatsbyImage)
   return (
     <li className="relative mb-6 sm:mb-0 w-full">
       <div className="flex items-center">

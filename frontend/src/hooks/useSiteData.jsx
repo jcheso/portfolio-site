@@ -7,7 +7,7 @@ export const useSiteData = () => {
         title
         backgroundImage {
           asset {
-            gatsbyImageData(placeholder: BLURRED)
+            gatsbyImage(placeholder: BLURRED, width: 64, height: 64)
           }
         }
         subtitle
@@ -18,7 +18,7 @@ export const useSiteData = () => {
         name
         portrait {
           asset {
-            gatsbyImageData(placeholder: BLURRED)
+            gatsbyImage(placeholder: BLURRED, width: 512)
           }
         }
         location
@@ -30,7 +30,7 @@ export const useSiteData = () => {
           skillType
           icon {
             asset {
-              gatsbyImageData
+              gatsbyImageData(placeholder: BLURRED, width: 64, height: 64)
             }
           }
         }
@@ -42,7 +42,7 @@ export const useSiteData = () => {
             projectUrl
             previewImage {
               asset {
-                gatsbyImageData(placeholder: BLURRED)
+                gatsbyImage(placeholder: BLURRED, width: 240)
               }
             }
             description
@@ -51,7 +51,7 @@ export const useSiteData = () => {
               skillType
               icon {
                 asset {
-                  gatsbyImageData
+                  gatsbyImageData(placeholder: BLURRED, width: 64, height: 64)
                 }
               }
             }
@@ -66,7 +66,7 @@ export const useSiteData = () => {
             location
             logo {
               asset {
-                gatsbyImageData(placeholder: BLURRED)
+                gatsbyImage(placeholder: BLURRED, width: 64, height: 64)
               }
             }
             startDate

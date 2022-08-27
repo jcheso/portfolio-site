@@ -10,7 +10,7 @@ import {
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 export const About = ({ profile }) => {
-  const avatar = getImage(profile.portrait.asset.gatsbyImageData)
+  const avatar = getImage(profile.portrait.asset.gatsbyImage)
   return (
     <section className="text-gray-400 body-font" id="profile">
       <div className="container mx-auto flex px-5 py-6 md:pb-24 md:pt-36 md:flex-row flex-col items-center">
@@ -44,17 +44,16 @@ export const About = ({ profile }) => {
           <p className="mb-8 leading-relaxed">{profile.aboutMe}</p>
           <div className="flex justify-center text-white">
             <OutboundLink
+              aria-label="GitHub"
               href="https://github.com/jcheso"
               target="_blank"
-              aria-label="github"
             >
               <FaGithubSquare className="h-12 w-12 hover:animate-pulse hover:text-opacity-80" />
             </OutboundLink>
             <OutboundLink
+              aria-label="linkedin"
               href="https://www.linkedin.com/in/jcheso/"
               target="_blank"
-              aria-label="linkedin"
-              alt="LinkedIn"
             >
               <FaLinkedin className="ml-4 h-12 w-12 hover:animate-pulse hover:text-opacity-80" />
             </OutboundLink>

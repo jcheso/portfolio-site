@@ -10,10 +10,15 @@ export const Footer = () => {
           © 2022 Jarryd Cheso
         </p>
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-          <OutboundLink href="https://github.com/jcheso" target="_blank">
+          <OutboundLink
+            aria-label="GitHub"
+            href="https://github.com/jcheso"
+            target="_blank"
+          >
             <FaGithubSquare className="h-6 w-6 hover:animate-pulse hover:text-opacity-80" />
           </OutboundLink>
           <OutboundLink
+            aria-label="linkedin"
             href="https://www.linkedin.com/in/jcheso/"
             target="_blank"
           >
