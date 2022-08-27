@@ -2,23 +2,22 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
 import { FaLayerGroup, FaArrowRight } from 'react-icons/fa'
+
 export const Project = ({ project }) => {
   const image = getImage(project.previewImage.asset.gatsbyImageData)
   return (
     <div className="p-4 md:w-1/3">
       <div className="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
         <GatsbyImage
-          className="lg:h-96 md:h-72 w-full object-cover object-center"
+          className="h-72 w-full object-cover object-center"
           image={image}
           alt="Project Image"
         />
-        <div className="p-6 flex flex-col">
-          <div>
-            <h1 className="title-font text-lg font-medium text-white mb-3">
-              {project.title}
-            </h1>
-            <p className="leading-relaxed mb-3">{project.description}</p>
-          </div>
+        <div className="p-6 flex flex-grow flex-col">
+          <h1 className="title-font text-lg font-medium text-white mb-3">
+            {project.title}
+          </h1>
+          <p className="leading-relaxed mb-3">{project.description}</p>
           <div className="items-center flex-wrap justify-start grid grid-rows-2 space-y-4">
             <div className="text-gray-400 inline-flex leading-none text-sm mt-2 md:mt-0">
               <span className="text-gray-500 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-800">
@@ -31,7 +30,7 @@ export const Project = ({ project }) => {
                   return (
                     <GatsbyImage
                       key={index}
-                      className="w-6 h-6"
+                      className="w-6 h-6 my-1"
                       image={icon}
                       alt="Skill"
                     />
@@ -39,16 +38,15 @@ export const Project = ({ project }) => {
                 })}
               </div>
             </div>
-            <div>
-              <OutboundLink
-                href={project.projectUrl}
-                target="_blank"
-                className="text-red-500 inline-flex items-center md:mb-2 lg:mb-0"
-              >
-                Learn More
-                <FaArrowRight className="w-4 h-4 ml-2" />
-              </OutboundLink>
-            </div>
+            <OutboundLink
+              href={project.projectUrl}
+              target="_blank"
+              className="text-red-500 inline-flex items-center md:mb-2 lg:mb-0"
+              name={project.title}
+            >
+              Learn More
+              <FaArrowRight className="w-4 h-4 ml-2" />
+            </OutboundLink>
           </div>
         </div>
       </div>
@@ -59,7 +57,7 @@ export const Project = ({ project }) => {
 export const Projects = ({ projects }) => {
   return (
     <section className="text-gray-400 bg-gray-900 body-font" id="projects">
-      <div className="container px-5 py-24 mx-auto">
+      <div className="container px-5 py-12 md:py-24 mx-auto">
         <div className="flex flex-col">
           <div className="flex flex-wrap sm:flex-row flex-col py-6 ">
             <h1 className="sm:w-2/5 text-white font-medium title-font sm:text-4xl text-3xl mb-2 sm:mb-0">

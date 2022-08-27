@@ -6,7 +6,7 @@ export const Navbar = () => {
   const navigation = [
     { name: 'About', href: '#' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Experience', href: '#' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
   ]
 

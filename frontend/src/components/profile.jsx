@@ -13,11 +13,11 @@ export const About = ({ profile }) => {
   const avatar = getImage(profile.portrait.asset.gatsbyImageData)
   return (
     <section className="text-gray-400 body-font" id="profile">
-      <div className="container mx-auto flex px-5 py-12 md:py-24 md:flex-row flex-col items-center">
-        <div className="w-48 h-48 md:hidden flex">
+      <div className="container mx-auto flex px-5 py-6 md:pb-24 md:pt-36 md:flex-row flex-col items-center">
+        <div className="md:hidden flex">
           <GatsbyImage
             image={avatar}
-            className="object-cover object-center rounded-full"
+            className="object-cover object-center rounded-full w-48 h-48"
             alt="avatar"
           />
         </div>
@@ -41,23 +41,28 @@ export const About = ({ profile }) => {
             </span>
           </div>
 
-          <p className="mb-8 leading-relaxed text-justify">{profile.aboutMe}</p>
+          <p className="mb-8 leading-relaxed">{profile.aboutMe}</p>
           <div className="flex justify-center text-white">
-            <OutboundLink href="https://github.com/jcheso" target="_blank">
+            <OutboundLink
+              href="https://github.com/jcheso"
+              target="_blank"
+              name="GitHub"
+            >
               <FaGithubSquare className="h-12 w-12 hover:animate-pulse hover:text-opacity-80" />
             </OutboundLink>
             <OutboundLink
               href="https://www.linkedin.com/in/jcheso/"
               target="_blank"
+              name="LinkedIn"
             >
               <FaLinkedin className="ml-4 h-12 w-12 hover:animate-pulse hover:text-opacity-80" />
             </OutboundLink>
           </div>
         </div>
-        <div className="md:h-96 md:w-96 w-48 h-48 hidden md:flex">
+        <div className="hidden md:flex">
           <GatsbyImage
             image={avatar}
-            className="object-cover object-center rounded-full"
+            className="object-cover object-center rounded-full h-72 w-72"
             alt="avatar"
           />
         </div>

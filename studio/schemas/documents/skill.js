@@ -15,6 +15,7 @@ export default {
       title: 'Type',
       options: {
         list: [
+          { title: 'Languages', value: 'languages' },
           { title: 'Frontend', value: 'frontend' },
           { title: 'Backend', value: 'backend' },
           { title: 'Tools and Services', value: 'tools' },
