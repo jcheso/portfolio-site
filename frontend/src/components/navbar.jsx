@@ -5,8 +5,8 @@ export const Navbar = () => {
   /* This example requires Tailwind CSS v2.0+ */
   const navigation = [
     { name: 'About', href: '#' },
-    { name: 'Skills', href: '#skills' },
     { name: 'Experience', href: '#experience' },
+    { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
   ]
 
