@@ -46,7 +46,7 @@ export const Skills = ({ skills }) => {
             {skillTypes.map((type, index) => {
               return (
                 <div key={index}>
-                  <p className="inline-block py-1 mb-2 px-2 rounded bg-gray-800 text-gray-400 text-opacity-75 text-sm font-medium tracking-widest">
+                  <p className="inline-block py-1 mb-2 px-2 rounded bg-gray-800 text-gray-400 text-sm font-medium tracking-widest">
                     {type.charAt(0).toUpperCase() + type.slice(1)}
                   </p>
                   <SkillList skills={skills} type={type} />

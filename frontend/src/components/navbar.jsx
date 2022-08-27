@@ -23,12 +23,12 @@ export const Navbar = () => {
                 Jarryd Cheso
               </Link>
             </div>
-            <div className="hidden ml-10 space-x-8 lg:block">
+            <div className="hidden ml-10 space-x-8 lg:block ">
               {navigation.map((link) => (
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="text-base font-medium hover:text-white"
+                  className="text-base font-medium hover:text-white "
                 >
                   {link.name}
                 </Link>

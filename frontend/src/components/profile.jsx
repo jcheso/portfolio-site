@@ -22,7 +22,7 @@ export const About = ({ profile }) => {
           />
         </div>
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center md:pt-0 pt-8">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+          <h1 className="animate-in zoom-in title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             Hi there, I'm <br className="hidden lg:inline-block" />
             <span className="text-red-500 animate-fade">{profile.name}</span>
           </h1>
@@ -36,7 +36,7 @@ export const About = ({ profile }) => {
               {profile.job}
             </span>
             <span>
-              <FaUniversity className="inline-block h-4 w-4 mr-2 my-1" />
+              <FaUniversity className="inline-block h-4 w-4 mr-2 my-1 " />
               {profile.education}
             </span>
           </div>
@@ -46,14 +46,15 @@ export const About = ({ profile }) => {
             <OutboundLink
               href="https://github.com/jcheso"
               target="_blank"
-              name="GitHub"
+              aria-label="github"
             >
               <FaGithubSquare className="h-12 w-12 hover:animate-pulse hover:text-opacity-80" />
             </OutboundLink>
             <OutboundLink
               href="https://www.linkedin.com/in/jcheso/"
               target="_blank"
-              name="LinkedIn"
+              aria-label="linkedin"
+              alt="LinkedIn"
             >
               <FaLinkedin className="ml-4 h-12 w-12 hover:animate-pulse hover:text-opacity-80" />
             </OutboundLink>

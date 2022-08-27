@@ -18,10 +18,10 @@ export const ExperienceComponent = ({ experience }) => {
 
       <div className="mt-3 sm:pr-8">
         <h1 className="text-lg font-bold text-white">{experience.role}</h1>
-        <p className="text-base font-normal text-gray-400">
+        <p className="text-base font-semibold text-gray-400">
           {experience.company}
         </p>
-        <time className="block mb-2 text-sm font-normal leading-none text-gray-500">
+        <time className="block mb-2 text-sm font-normal leading-none text-gray-400">
           {experience.startDate} - {experience.endDate}
         </time>
       </div>

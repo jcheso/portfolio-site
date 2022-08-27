@@ -20,7 +20,7 @@ export const Project = ({ project }) => {
           <p className="leading-relaxed mb-3">{project.description}</p>
           <div className="items-center flex-wrap justify-start grid grid-rows-2 space-y-4">
             <div className="text-gray-400 inline-flex leading-none text-sm mt-2 md:mt-0">
-              <span className="text-gray-500 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-800">
+              <span className="mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-800">
                 <FaLayerGroup className="w-6 h-6 mr-2"></FaLayerGroup>
                 Tech Stack
               </span>
@@ -44,7 +44,7 @@ export const Project = ({ project }) => {
               className="text-red-500 inline-flex items-center md:mb-2 lg:mb-0"
               name={project.title}
             >
-              Learn More
+              Learn more about {project.title}
               <FaArrowRight className="w-4 h-4 ml-2" />
             </OutboundLink>
           </div>
