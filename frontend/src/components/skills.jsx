@@ -3,13 +3,13 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 export const SkillList = ({ skills, type }) => {
   return (
-    <div className="grid lg:grid-cols-12 md:grid-cols-8 grid-cols-4">
+    <ul className="grid lg:grid-cols-12 md:grid-cols-8 grid-cols-4">
       {skills
         .filter((skill) => skill.skillType === type)
         .map((filteredSkill, index) => {
           const icon = getImage(filteredSkill.icon.asset.gatsbyImageData)
           return (
-            <div
+            <li
               key={index}
               className="flex flex-col justify-evenly items-center text-gray-400 mr-2 my-2"
             >
@@ -21,10 +21,10 @@ export const SkillList = ({ skills, type }) => {
               <div className="pt-1 text-center text-sm">
                 {filteredSkill.title}
               </div>
-            </div>
+            </li>
           )
         })}
-    </div>
+    </ul>
   )
 }
 
