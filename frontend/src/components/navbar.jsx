@@ -6,7 +6,7 @@ export const Navbar = () => {
   const navigation = [
     { name: 'About', href: '#' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Experience', href: '#' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
   ]
 
@@ -16,19 +16,19 @@ export const Navbar = () => {
         className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
         aria-label="Top"
       >
-        <div className="w-full py-6 flex items-center justify-between border-b border-zinc-500 lg:border-none">
+        <div className="py-2 w-full flex items-center justify-between border-b border-zinc-500 lg:border-none">
           <div className="flex items-center w-full">
             <div className="flex w-full text-center md:justify-between justify-center">
               <Link to="#" className="text-2xl font-bold">
                 Jarryd Cheso
               </Link>
             </div>
-            <div className="hidden ml-10 space-x-8 lg:block">
+            <div className="hidden ml-10 space-x-8 lg:block ">
               {navigation.map((link) => (
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="text-base font-medium hover:text-white"
+                  className="text-base font-medium hover:text-white "
                 >
                   {link.name}
                 </Link>
@@ -36,7 +36,7 @@ export const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className="py-6 flex flex-wrap justify-center space-x-6 lg:hidden">
+        <div className="py-2 flex flex-wrap justify-center space-x-6 lg:hidden">
           {navigation.map((link) => (
             <Link
               key={link.name}

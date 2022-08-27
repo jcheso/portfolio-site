@@ -18,7 +18,7 @@ export const useSiteData = () => {
         name
         portrait {
           asset {
-            gatsbyImageData(height: 500, placeholder: BLURRED)
+            gatsbyImageData(placeholder: BLURRED)
           }
         }
         location
@@ -58,6 +58,23 @@ export const useSiteData = () => {
           }
         }
       }
+      experience: allSanityExperience {
+        edges {
+          node {
+            company
+            endDate
+            location
+            logo {
+              asset {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+            startDate
+            role
+            order
+          }
+        }
+      }
     }
   `)
 
@@ -65,5 +82,6 @@ export const useSiteData = () => {
     site: data.site,
     profile: data.profile,
     projects: data.projects.edges,
+    experience: data.experience.edges,
   }
 }

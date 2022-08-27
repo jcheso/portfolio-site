@@ -6,9 +6,10 @@ import { About } from '../components/profile'
 import { Footer } from '../components/footer'
 import { Skills } from '../components/skills'
 import { Projects } from '../components/projects'
+import { Experience } from '../components/experience'
 
 const IndexPage = () => {
-  const { site, profile, projects } = useSiteData()
+  const { site, profile, projects, experience } = useSiteData()
   if (!site) {
     throw new Error(
       'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
@@ -18,6 +19,7 @@ const IndexPage = () => {
     <div className="bg-gray-900">
       <Navbar />
       <About profile={profile} />
+      <Experience experience={experience} />
       <Skills skills={profile.skills} />
       <Projects projects={projects} />
       <Footer />
@@ -27,4 +29,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <SEO title="About Me" />
+export const Head = () => <SEO title="Jarryd Cheso" />

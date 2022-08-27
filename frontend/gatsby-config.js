@@ -6,10 +6,10 @@ module.exports = {
   siteMetadata: {
     // If you didn't use the resolveSiteUrl option this needs to be set
     // siteUrl: `https://www.jarrydcheso.me`,
-    siteUrl: `http://localhost:8000/`,
+    siteUrl: `https://jarrydcheso.gatsbyjs.io`,
     title: 'Jarryd Cheso',
     description: 'My Portfolio',
-    image: '/logo.jpg',
+    image: '/icon.png',
   },
   plugins: [
     'gatsby-plugin-postcss',
@@ -46,7 +46,6 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
@@ -72,6 +71,12 @@ module.exports = {
         path: './src/pages/',
       },
       __key: 'pages',
+    },
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en',
+      },
     },
   ],
 }
