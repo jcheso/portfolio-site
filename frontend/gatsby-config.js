@@ -9,7 +9,7 @@ module.exports = {
     siteUrl: `https://jarrydcheso.gatsbyjs.io`,
     title: 'Jarryd Cheso',
     description: 'Find out more about my career as a Software Engineer',
-    image: '/public/card.png',
+    image: '/card.png',
   },
   plugins: [
     'gatsby-plugin-postcss',
