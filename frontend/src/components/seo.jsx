@@ -17,6 +17,7 @@ export const SEO = ({ title, description, pathname, children }) => {
     url: `${siteUrl}${pathname || ``}`,
     twitterUsername,
   }
+  console.log(seo.image)
 
   return (
     <>

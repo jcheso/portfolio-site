@@ -8,8 +8,8 @@ module.exports = {
     // siteUrl: `https://www.jarrydcheso.me`,
     siteUrl: `https://jarrydcheso.gatsbyjs.io`,
     title: 'Jarryd Cheso',
-    description: 'My Portfolio',
-    image: '/icon.png',
+    description: 'Find out more about my career as a Software Engineer',
+    image: '/static/card.png',
   },
   plugins: [
     'gatsby-plugin-postcss',
@@ -60,15 +60,15 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/images/',
+        path: `${__dirname}/src/images/`,
       },
-      __key: 'images',
+      __key: 'img',
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: './src/pages/',
+        path: `${__dirname}/src/pages/`,
       },
       __key: 'pages',
     },

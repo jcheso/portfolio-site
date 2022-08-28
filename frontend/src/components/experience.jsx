@@ -1,6 +1,6 @@
 import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-
+import { FaMapPin, FaCalendar } from 'react-icons/fa'
 export const ExperienceComponent = ({ experience }) => {
   const logo = getImage(experience.logo.asset.gatsbyImage)
   return (
@@ -21,9 +21,13 @@ export const ExperienceComponent = ({ experience }) => {
         <p className="text-base font-semibold text-gray-400">
           {experience.company}
         </p>
-        <time className="block mb-2 text-sm font-normal leading-none text-gray-400">
-          {experience.startDate} - {experience.endDate}
-        </time>
+        <div className="flex flex-row text-sm text-gray-400 items-center pt-2">
+          <FaMapPin className="h-4 w-4 mr-2" /> {experience.location}
+        </div>
+        <div className="flex flex-row  items-center  mb-2 text-sm font-normal leading-none text-gray-400 pt-2">
+          <FaCalendar className="h-4 w-4 mr-2" /> {experience.startDate} -{' '}
+          {experience.endDate}
+        </div>
       </div>
     </li>
   )

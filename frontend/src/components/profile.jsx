@@ -27,18 +27,18 @@ export const About = ({ profile }) => {
             <span className="text-red-500 animate-fade">{profile.name}</span>
           </h1>
           <div className="text-xs md:text-sm leading-normal mb-2 text-white font-medium flex align-middle flex-col">
-            <span>
-              <FaMapPin className="inline-block h-4 w-4 mr-2 my-1" />
+            <div className="flex flex-row items-center pb-1">
+              <FaMapPin className="h-4 w-4 mr-2" />
               {profile.location}
-            </span>
-            <span>
-              <FaBriefcase className="inline-block h-4 w-4 mr-2 my-1" />
+            </div>
+            <div className="flex flex-row items-center pb-1">
+              <FaBriefcase className="h-4 w-4 mr-2" />
               {profile.job}
-            </span>
-            <span>
-              <FaUniversity className="inline-block h-4 w-4 mr-2 my-1 " />
+            </div>
+            <div className="flex flex-row items-center pb-1">
+              <FaUniversity className="h-4 w-4 mr-2" />
               {profile.education}
-            </span>
+            </div>
           </div>
 
           <p className="mb-8 leading-relaxed">{profile.aboutMe}</p>
