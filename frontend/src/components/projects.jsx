@@ -24,7 +24,7 @@ export const Project = ({ project }) => {
                 <FaLayerGroup className="w-6 h-6 mr-2"></FaLayerGroup>
                 Tech Stack
               </span>
-              <div className="flex flex-wrap justify-evenly items-center align-middle space-x-1 md:space-x-2">
+              <div className="flex flex-wrap justify-evenly items-center align-middle space-x-2">
                 {project.skills.map((skill, index) => {
                   const icon = getImage(skill.icon.asset.gatsbyImageData)
                   return (

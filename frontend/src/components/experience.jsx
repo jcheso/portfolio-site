@@ -13,7 +13,7 @@ export const ExperienceComponent = ({ experience }) => {
             alt={experience.company}
           />
         </div>
-        <div className="hidden sm:flex w-full h-0.5 bg-gray-700"></div>
+        <div className="hidden md:flex w-full h-0.5 bg-gray-700"></div>
       </div>
 
       <div className="mt-3 sm:pr-8">

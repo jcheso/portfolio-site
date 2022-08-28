@@ -26,7 +26,7 @@ export const About = ({ profile }) => {
             Hi there, I'm <br className="hidden lg:inline-block" />
             <span className="text-red-500 animate-fade">{profile.name}</span>
           </h1>
-          <div className="text-xs md:text-sm leading-normal mb-2 text-white font-medium flex align-middle flex-col">
+          <div className="text-xs md:text-sm leading-normal mb-2 text-white font-medium flex align-middle flex-col md:items-start w-full items-center">
             <div className="flex flex-row items-center pb-1">
               <FaMapPin className="h-4 w-4 mr-2" />
               {profile.location}
