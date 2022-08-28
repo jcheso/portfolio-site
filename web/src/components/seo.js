@@ -1,7 +1,7 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
-import PropTypes from "prop-types";
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
+import PropTypes from 'prop-types'
 
 function SearchEngineOptimisation({
   description,
@@ -25,12 +25,11 @@ function SearchEngineOptimisation({
         }
       }
     `
-  );
+  )
 
-  const metaDescription = description || site.siteMetadata.description;
-  const image = site.siteMetadata.image;
-  console.log(image);
-  const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null;
+  const metaDescription = description || site.siteMetadata.description
+  const image = site.siteMetadata.image
+  const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
 
   return (
     <Helmet
@@ -43,7 +42,7 @@ function SearchEngineOptimisation({
         canonical
           ? [
               {
-                rel: "canonical",
+                rel: 'canonical',
                 href: canonical,
               },
             ]
@@ -55,7 +54,7 @@ function SearchEngineOptimisation({
           content: metaDescription,
         },
         {
-          name: "keywords",
+          name: 'keywords',
           content: site.siteMetadata.keywords,
         },
         {
@@ -84,30 +83,30 @@ function SearchEngineOptimisation({
         },
 
         {
-          property: "og:image",
+          property: 'og:image',
           content: image,
         },
         {
-          name: "twitter:card",
-          content: "summary_large_image",
+          name: 'twitter:card',
+          content: 'summary_large_image',
         },
         {
-          name: "twitter:card",
-          content: "summary",
+          name: 'twitter:card',
+          content: 'summary',
         },
         {
-          name: "twitter:image",
+          name: 'twitter:image',
           content: image,
         },
       ].concat(meta)}
     />
-  );
+  )
 }
 SearchEngineOptimisation.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-};
+}
 SearchEngineOptimisation.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
@@ -119,5 +118,5 @@ SearchEngineOptimisation.propTypes = {
     width: PropTypes.number.isRequired,
   }),
   pathname: PropTypes.string,
-};
-export default SearchEngineOptimisation;
+}
+export default SearchEngineOptimisation
