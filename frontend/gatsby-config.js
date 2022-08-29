@@ -18,6 +18,7 @@ module.exports = {
       options: {
         projectId: process.env.GATSBY_SANITY_PROJECT_ID,
         dataset: 'production',
+        token: process.env.GATSBY_SANITY_TOKEN,
       },
     },
     'gatsby-plugin-image',
