@@ -1,27 +1,40 @@
 import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { InView } from 'react-intersection-observer'
 
 export const SkillList = ({ skills, type }) => {
   return (
-    <ul className="grid lg:grid-cols-12 md:grid-cols-8 grid-cols-4">
+    <ul className="grid lg:grid-cols-12 md:grid-cols-8 grid-cols-4 animate-in zoom-in">
       {skills
         .filter((skill) => skill.skillType === type)
         .map((filteredSkill, index) => {
           const icon = getImage(filteredSkill.icon.asset.gatsbyImageData)
           return (
-            <li
-              key={index}
-              className="flex flex-col justify-evenly items-center text-gray-400 mr-2 my-2"
-            >
-              <GatsbyImage
-                className="h-14 w-14"
-                image={icon}
-                alt={filteredSkill.title}
-              />
-              <div className="pt-1 text-center text-sm">
-                {filteredSkill.title}
-              </div>
-            </li>
+            <InView as="div" key={index} triggerOnce={true} delay={index * 50}>
+              {({ inView, ref, entry }) => (
+                <span ref={ref}>
+                  <div
+                    className={
+                      inView ? 'animate-in fade-in opacity-100' : 'opacity-0'
+                    }
+                  >
+                    <li
+                      key={index}
+                      className="flex flex-col justify-evenly items-center text-gray-400 mr-2 my-2"
+                    >
+                      <GatsbyImage
+                        className="h-14 w-14"
+                        image={icon}
+                        alt={filteredSkill.title}
+                      />
+                      <div className="pt-1 text-center text-sm">
+                        {filteredSkill.title}
+                      </div>
+                    </li>{' '}
+                  </div>
+                </span>
+              )}
+            </InView>
           )
         })}
     </ul>
@@ -45,12 +58,30 @@ export const Skills = ({ skills }) => {
           <div className="flex flex-col space-y-2">
             {skillTypes.map((type, index) => {
               return (
-                <div key={index}>
-                  <p className="inline-block py-1 mb-2 px-2 rounded bg-gray-800 text-gray-400 text-sm font-medium tracking-widest">
-                    {type.charAt(0).toUpperCase() + type.slice(1)}
-                  </p>
-                  <SkillList skills={skills} type={type} />
-                </div>
+                <InView
+                  as="div"
+                  key={index}
+                  triggerOnce={true}
+                  delay={index * 300}
+                >
+                  {({ inView, ref, entry }) => (
+                    <span ref={ref}>
+                      <div
+                        className={
+                          inView
+                            ? 'animate-in zoom-in opacity-100'
+                            : 'opacity-0'
+                        }
+                      >
+                        <p className="inline-block py-1 mb-2 px-2 rounded bg-gray-800 text-gray-400 text-sm font-medium tracking-widest">
+                          {type.charAt(0).toUpperCase() + type.slice(1)}
+                        </p>
+
+                        <SkillList skills={skills} type={type} />
+                      </div>
+                    </span>
+                  )}
+                </InView>
               )
             })}
           </div>

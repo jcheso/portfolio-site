@@ -1,35 +1,53 @@
 import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { FaMapPin, FaCalendar } from 'react-icons/fa'
-export const ExperienceComponent = ({ experience }) => {
+import { InView } from 'react-intersection-observer'
+
+export const ExperienceComponent = ({ experience, delay }) => {
   const logo = getImage(experience.logo.asset.gatsbyImage)
   return (
-    <li className="relative mb-6 sm:mb-0 w-full">
-      <div className="flex items-center">
-        <div className="flex z-10 justify-center items-center w-12 h-12 rounded-full ring-0 bg-blue-900 sm:ring-8 ring-gray-900 shrink-0">
-          <GatsbyImage
-            className="rounded-full"
-            image={logo}
-            alt={experience.company}
-          />
-        </div>
-        <div className="hidden md:flex w-full h-0.5 bg-gray-700"></div>
-      </div>
+    <InView as="div" triggerOnce={true} delay={delay}>
+      {({ inView, ref, entry }) => (
+        <span ref={ref}>
+          <div
+            className={
+              inView
+                ? 'animate-in slide-in-from-left opacity-100 '
+                : 'opacity-0'
+            }
+          >
+            <li className="relative mb-6 sm:mb-0 w-full">
+              <div className="flex items-center">
+                <div className="flex z-10 justify-center items-center w-12 h-12 rounded-full ring-0 bg-blue-900 sm:ring-8 ring-gray-900 shrink-0">
+                  <GatsbyImage
+                    className="rounded-full"
+                    image={logo}
+                    alt={experience.company}
+                  />
+                </div>
+                <div className="hidden md:flex w-full h-0.5 bg-gray-700"></div>
+              </div>
 
-      <div className="mt-3 sm:pr-8">
-        <h1 className="text-lg font-bold text-white">{experience.role}</h1>
-        <p className="text-base font-semibold text-gray-400">
-          {experience.company}
-        </p>
-        <div className="flex flex-row text-sm text-gray-400 items-center pt-2">
-          <FaMapPin className="h-4 w-4 mr-2" /> {experience.location}
-        </div>
-        <div className="flex flex-row  items-center  mb-2 text-sm font-normal leading-none text-gray-400 pt-2">
-          <FaCalendar className="h-4 w-4 mr-2" /> {experience.startDate} -{' '}
-          {experience.endDate}
-        </div>
-      </div>
-    </li>
+              <div className="mt-3 sm:pr-8">
+                <h1 className="text-lg font-bold text-white">
+                  {experience.role}
+                </h1>
+                <p className="text-base font-semibold text-gray-400">
+                  {experience.company}
+                </p>
+                <div className="flex flex-row text-sm text-gray-400 items-center pt-2">
+                  <FaMapPin className="h-4 w-4 mr-2" /> {experience.location}
+                </div>
+                <div className="flex flex-row  items-center  mb-2 text-sm font-normal leading-none text-gray-400 pt-2">
+                  <FaCalendar className="h-4 w-4 mr-2" /> {experience.startDate}{' '}
+                  - {experience.endDate}
+                </div>
+              </div>
+            </li>
+          </div>
+        </span>
+      )}
+    </InView>
   )
 }
 
@@ -52,7 +70,11 @@ export const Experience = ({ experience }) => {
           <div className="flex flex-col">
             <ol className="items-center sm:flex">
               {orderedExperience.map((experience, index) => (
-                <ExperienceComponent key={index} experience={experience.node} />
+                <ExperienceComponent
+                  key={index}
+                  experience={experience.node}
+                  delay={index * 300}
+                />
               ))}
             </ol>
           </div>
