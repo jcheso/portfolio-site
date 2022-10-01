@@ -5,8 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     // If you didn't use the resolveSiteUrl option this needs to be set
-    // siteUrl: `https://www.jarrydcheso.me`,
-    siteUrl: `https://jarrydcheso.gatsbyjs.io`,
+    siteUrl: `https://www.jarrydcheso.me`,
     title: 'Jarryd Cheso',
     description: 'Find out more about my career as a Software Engineer',
     image: '/card.png',
@@ -27,7 +26,7 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          process.env.GATSBY_GOOGLE_ANALYTICS_ID, // Google Analytics / GA
+          'G-QVH2FVDFMH', // Google Analytics / GA
         ],
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
